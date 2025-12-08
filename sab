@@ -2771,59 +2771,118 @@ end;
 task.spawn(C_72);
 
 -- StarterGui.ScreenGui.Frame.SettingsGui.Settings.Player.ScrollingFrame.InfJump.TextButton.LocalScript
+-- StarterGui.ScreenGui.Frame.SettingsGui.Settings.Player.ScrollingFrame.InfJump.TextButton.LocalScript
 local function C_87()
 local script = G2L["87"];
-	local Player = game:GetService('Players').LocalPlayer
-	local UIS = game:GetService('UserInputService')
-	local button = script.Parent  -- Asume que este script está dentro de un TextButton
-	
-	-- Configuración del JumpHeight
-	_G.JumpHeight = 50
-	
-	-- Variable para controlar si el salto infinito está habilitado
-	local isEnabled = false
-	
-	-- Función auxiliar
-	local function Action(Object, Function)
-		if Object ~= nil then
-			Function(Object)
-		end
-	end
-	
-	-- Función para actualizar el color del botón
-	local function updateButtonAppearance()
-		if isEnabled then
-			button.TextColor3 = Color3.fromRGB(0, 255, 0)  -- Verde cuando está activado
-		else
-			button.TextColor3 = Color3.fromRGB(255, 255, 255)  -- Blanco cuando está desactivado
-		end
-	end
-	
-	-- Detectar la pulsación de la tecla espacio
-	UIS.InputBegan:Connect(function(UserInput)
-		if isEnabled and UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
-			Action(Player.Character.Humanoid, function(self)
-				if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
-					Action(self.Parent.HumanoidRootPart, function(self)
-						self.Velocity = Vector3.new(0, _G.JumpHeight, 0)
-					end)
-				end
-			end)
-		end
-	end)
-	
-	-- Función Toggle para activar/desactivar el Infinity Jump
-	local function toggleInfinityJump()
-		isEnabled = not isEnabled
-		updateButtonAppearance()
-	end
-	
-	-- Conectar el evento del botón
-	button.MouseButton1Click:Connect(toggleInfinityJump)
-	
-	-- Actualizar el color del botón al inicio
-	updateButtonAppearance()
-	
+    local Player = game:GetService('Players').LocalPlayer
+    local UIS = game:GetService('UserInputService')
+    local button = script.Parent  -- Asume que este script está dentro de un TextButton
+    
+    -- Configuración del JumpHeight
+    _G.JumpHeight = 50
+    
+    -- Variable para controlar si el salto infinito está habilitado
+    local isEnabled = false
+    local pcConnection = nil
+    local mobileConnection = nil
+    
+    -- Función auxiliar
+    local function Action(Object, Function)
+        if Object ~= nil then
+            Function(Object)
+        end
+    end
+    
+    -- Función principal para ejecutar el salto infinito
+    local function doInfiniteJump()
+        local char = Player.Character
+        if not char then return end
+        
+        local hum = char:FindFirstChild("Humanoid")
+        local root = char:FindFirstChild("HumanoidRootPart")
+        
+        if not hum or not root then return end
+        
+        -- Activar el salto
+        hum.Jump = true
+        
+        -- Aplicar fuerza de salto
+        local vel = root.Velocity
+        root.Velocity = Vector3.new(vel.X, _G.JumpHeight, vel.Z)
+    end
+    
+    -- Configurar conexiones para PC y Mobile
+    local function setupInfiniteJumps(enabled)
+        -- Limpiar conexiones anteriores
+        if pcConnection then
+            pcConnection:Disconnect()
+            pcConnection = nil
+        end
+        if mobileConnection then
+            mobileConnection:Disconnect()
+            mobileConnection = nil
+        end
+        
+        if enabled then
+            -- CONEXIÓN PARA PC (Tecla Espacio)
+            pcConnection = UIS.InputBegan:Connect(function(input, gameProcessed)
+                if gameProcessed then return end
+                
+                -- PC: Tecla Espacio
+                if input.UserInputType == Enum.UserInputType.Keyboard 
+                and input.KeyCode == Enum.KeyCode.Space then
+                    doInfiniteJump()
+                end
+            end)
+            
+            -- CONEXIÓN PARA MOBILE (JumpRequest)
+            -- Esta es la clave para que funcione en móvil
+            mobileConnection = UIS.JumpRequest:Connect(function()
+                if isEnabled then
+                    doInfiniteJump()
+                end
+            end)
+        end
+    end
+    
+    -- Función para actualizar el color del botón
+    local function updateButtonAppearance()
+        if isEnabled then
+            button.TextColor3 = Color3.fromRGB(0, 255, 0)  -- Verde cuando está activado
+        else
+            button.TextColor3 = Color3.fromRGB(255, 255, 255)  -- Blanco cuando está desactivado
+        end
+    end
+    
+    -- Función Toggle para activar/desactivar el Infinity Jump
+    local function toggleInfinityJump()
+        isEnabled = not isEnabled
+        setupInfiniteJumps(isEnabled)
+        updateButtonAppearance()
+    end
+    
+    -- Conectar el evento del botón
+    button.MouseButton1Click:Connect(toggleInfinityJump)
+    
+    -- Actualizar el color del botón al inicio
+    updateButtonAppearance()
+    
+    -- Reconectar cuando el personaje cambie
+    Player.CharacterAdded:Connect(function()
+        task.wait(0.5)  -- Esperar a que el personaje se cargue completamente
+        if isEnabled then
+            setupInfiniteJumps(true)
+        end
+    end)
+    
+    -- Limpieza cuando el jugador sale
+    game:GetService("Players").PlayerRemoving:Connect(function(p)
+        if p == Player then
+            if pcConnection then pcConnection:Disconnect() end
+            if mobileConnection then mobileConnection:Disconnect() end
+        end
+    end)
+    
 end;
 task.spawn(C_87);
 
@@ -5134,114 +5193,137 @@ local script = G2L["129"];
 end;
 task.spawn(C_129);
 -- StarterGui.ScreenGui.VexInstaGrab.TextButton.LocalScript
+-- StarterGui.ScreenGui.VexInstaGrab.TextButton.LocalScript
 local function C_12b()
 local script = G2L["12b"];
-	local Players = game:GetService("Players")
-	local RunService = game:GetService("RunService")
-	local UserInputService = game:GetService("UserInputService")
-	local ContextActionService = game:GetService("ContextActionService")
-	
-	local player = Players.LocalPlayer
-	local MAX_SEARCH_DISTANCE = 6
-	local AUTO_ACTIVATE_DELAY = 1.3
-	local currentPrompt = nil
-	local isAutoActivating = false
-	
-	local button = script.Parent -- Asumiendo que el script está dentro de un TextButton
-	
-	-- 🔹 Obtener HRP
-	local function getHRP()
-		local char = player.Character
-		if not char then return nil end
-		return char:FindFirstChild("HumanoidRootPart")
-	end
-	
-	-- 🔹 Buscar prompt más cercano
-	local function findNearestPrompt()
-		local hrp = getHRP()
-		if not hrp then return nil end
-		local nearest, nearestDist = nil, math.huge
-		for _, prompt in ipairs(workspace:GetDescendants()) do
-			if prompt:IsA("ProximityPrompt") and prompt.Enabled then
-				local part = prompt:FindFirstAncestorWhichIsA("BasePart")
-				if part then
-					local dist = (hrp.Position - part.Position).Magnitude
-					if dist <= MAX_SEARCH_DISTANCE and dist < nearestDist then
-						nearest, nearestDist = prompt, dist
-					end
-				end
-			end
-		end
-		return nearest
-	end
-	
-	-- 🔹 Activar el prompt más cercano
-	local function activatePrompt()
-		currentPrompt = findNearestPrompt()
-		if currentPrompt then
-			pcall(function()
-				fireproximityprompt(currentPrompt, math.huge)
-				currentPrompt:InputHoldBegin()
-				currentPrompt:InputHoldEnd()
-			end)
-		end
-	end
-	
-	-- 🔹 Loop automático mientras haya prompt
-	local function startAutoActivate()
-		if isAutoActivating then return end
-		isAutoActivating = true
-	
-		task.spawn(function()
-			while isAutoActivating do
-				local nearest = findNearestPrompt()
-				if not nearest then
-					break -- no hay prompts cerca → detener
-				end
-				activatePrompt()
-				task.wait(AUTO_ACTIVATE_DELAY)
-			end
-	
-			-- 🔹 Detener
-			isAutoActivating = false
-		end)
-	end
-	
-	-- 🔹 Evento de activación del TextButton
-	button.Activated:Connect(function()
-		if not isAutoActivating then
-			startAutoActivate()
-		else
-			isAutoActivating = false
-		end
-	end)
-	
-	-- 🔹 Función para activar con la tecla Q
-	local function onKeyPress(input, gameProcessedEvent)
-		if gameProcessedEvent then return end
-		if input.KeyCode == Enum.KeyCode.Q then
-			if not isAutoActivating then
-				startAutoActivate()
-			else
-				isAutoActivating = false
-			end
-		end
-	end
-	
-	-- Conectar el evento de presionar tecla
-	UserInputService.InputBegan:Connect(onKeyPress)
-	
-	-- 🔹 Inicializar
-	local function initialize()
-	
-	end
-	
-	if player.Character then
-		initialize()
-	else
-		player.CharacterAdded:Once(initialize)
-	end
-	
+    local Players = game:GetService("Players")
+    local RunService = game:GetService("RunService")
+    local ProximityPromptService = game:GetService("ProximityPromptService")
+    local LocalPlayer = Players.LocalPlayer
+    
+    local button = script.Parent
+    local isEnabled = false
+    local OFF_COLOR = Color3.fromRGB(255,255,255)
+    local ON_COLOR = Color3.fromRGB(0, 255, 0)
+    
+    -- Variables for auto-grab
+    local autoActivate = false
+    local MAX_SEARCH_DISTANCE = 6
+    local AUTO_ACTIVATE_DELAY = 0.5
+    local currentPrompt = nil
+    
+    -- Function to find nearest steal prompt
+    local function findNearestStealPrompt()
+        local character = LocalPlayer.Character
+        if not character then return nil end
+        
+        local hrp = character:FindFirstChild("HumanoidRootPart")
+        if not hrp then return nil end
+        
+        local nearestPrompt = nil
+        local nearestDistance = MAX_SEARCH_DISTANCE
+        
+        for _, prompt in ipairs(workspace:GetDescendants()) do
+            if prompt:IsA("ProximityPrompt") and prompt.Enabled then
+                -- Check if it's a steal prompt
+                local actionText = string.lower(prompt.ActionText or "")
+                if actionText:find("steal") or actionText:find("grab") or actionText:find("take") then
+                    local part = prompt:FindFirstAncestorWhichIsA("BasePart")
+                    if part then
+                        local distance = (hrp.Position - part.Position).Magnitude
+                        if distance <= nearestDistance then
+                            nearestPrompt = prompt
+                            nearestDistance = distance
+                        end
+                    end
+                end
+            end
+        end
+        
+        return nearestPrompt
+    end
+    
+    -- Function to activate the nearest prompt
+    local function activateNearestPrompt()
+        local prompt = findNearestStealPrompt()
+        if prompt then
+            currentPrompt = prompt
+            fireproximityprompt(prompt, math.huge)
+        end
+        return prompt ~= nil
+    end
+    
+    -- Auto-activation loop
+    local autoActivateConnection = nil
+    
+    local function startAutoActivation()
+        if autoActivateConnection then
+            autoActivateConnection:Disconnect()
+        end
+        
+        autoActivateConnection = RunService.Heartbeat:Connect(function()
+            if not autoActivate then return end
+            
+            local prompt = findNearestStealPrompt()
+            if prompt then
+                fireproximityprompt(prompt, math.huge)
+            end
+        end)
+    end
+    
+    local function stopAutoActivation()
+        if autoActivateConnection then
+            autoActivateConnection:Disconnect()
+            autoActivateConnection = nil
+        end
+    end
+    
+    -- Toggle function
+    local function toggleInstaGrab()
+        if isEnabled then
+            -- Turn OFF
+            isEnabled = false
+            autoActivate = false
+            button.TextColor3 = OFF_COLOR
+            stopAutoActivation()
+        else
+            -- Turn ON
+            isEnabled = true
+            autoActivate = true
+            button.TextColor3 = ON_COLOR
+            
+            -- Try to activate immediately
+            local activated = activateNearestPrompt()
+            
+            if activated then
+                -- Start auto-activation if we found a prompt
+                startAutoActivation()
+            else
+                -- No prompt found, but keep toggle ON and start listening
+                startAutoActivation()
+            end
+        end
+    end
+    
+    -- Also listen for new prompts
+    ProximityPromptService.PromptShown:Connect(function(prompt)
+        if not isEnabled then return end
+        
+        local actionText = string.lower(prompt.ActionText or "")
+        if actionText:find("steal") or actionText:find("grab") or actionText:find("take") then
+            currentPrompt = prompt
+            if autoActivate then
+                fireproximityprompt(prompt, math.huge)
+            end
+        end
+    end)
+    
+    -- Connect the button
+    button.MouseButton1Click:Connect(toggleInstaGrab)
+    
+    -- Cleanup when script is destroyed
+    script.Destroying:Connect(stopAutoActivation)
+    
 end;
 task.spawn(C_12b);
 -- StarterGui.ScreenGui.VexAimlock.LocalScript
@@ -5784,122 +5866,115 @@ local script = G2L["147"];
 end;
 task.spawn(C_147);
 -- StarterGui.ScreenGui.VexCloner.TextButton.LocalScript
+
+-- StarterGui.ScreenGui.VexCloner.TextButton.LocalScript
 local function C_149()
 local script = G2L["149"];
-	local Players = game:GetService("Players")
-	local LocalPlayer = Players.LocalPlayer
-	local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	
-	local TOOL_NAME = "Quantum Cloner"
-	local button = script.Parent -- Asumimos que el script está dentro de un TextButton
-	
-	-- Función principal de Mobile Desync
-	local function enableMobileDesync()
-		local success, error = pcall(function()
-			local backpack = LocalPlayer:WaitForChild("Backpack")
-			local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
-			local humanoid = character:WaitForChild("Humanoid")
-	
-			local packages = ReplicatedStorage:WaitForChild("Packages", 5)
-			if not packages then warn("") return false end
-	
-			local netFolder = packages:WaitForChild("Net", 5)
-			if not netFolder then warn("") return false end
-	
-			local useItemRemote = netFolder:WaitForChild("RE/UseItem", 5)
-			local teleportRemote = netFolder:WaitForChild("RE/QuantumCloner/OnTeleport", 5)
-			if not useItemRemote or not teleportRemote then warn("") return false end
-	
-			-- Buscar la herramienta en el inventario
-			local toolNames = {"Quantum Cloner", "Brainrot", "brainrot"}
-			local tool
-			for _, toolName in ipairs(toolNames) do
-				tool = backpack:FindFirstChild(toolName) or character:FindFirstChild(toolName)
-				if tool then break end
-			end
-			if not tool then
-				for _, item in ipairs(backpack:GetChildren()) do
-					if item:IsA("Tool") then
-						tool = item
-						break
-					end
-				end
-			end
-	
-			if tool and tool.Parent == backpack then
-				humanoid:EquipTool(tool)
-			end
-	
-			-- Activar desync
-			if setfflag then setfflag("WorldStepMax", "-9999999999") end
-			useItemRemote:FireServer()
-			teleportRemote:FireServer()
-			if setfflag then setfflag("WorldStepMax", "-1") end
-			return true
-		end)
-	
-		if not success then
-			warn("" .. tostring(error))
-			return false
-		end
-		return success
-	end
-	
-	local function disableMobileDesync()
-		pcall(function()
-			if setfflag then setfflag("WorldStepMax", "-1") end
-		end)
-	end
-	
-	-- Función para activar la herramienta
-	local function activateTool()
-		-- Esperar que la mochila y el personaje estén disponibles
-		local backpack = LocalPlayer:WaitForChild("Backpack")
-		local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
-		local humanoid = character:WaitForChild("Humanoid")
-	
-		-- Buscar la herramienta en la mochila o en el personaje
-		local tool = backpack:FindFirstChild(TOOL_NAME) or character:FindFirstChild(TOOL_NAME)
-	
-		-- Si no la encontramos, buscar en cualquier herramienta del inventario
-		if not tool then
-			for _, item in ipairs(backpack:GetChildren()) do
-				if item:IsA("Tool") then
-					tool = item
-					break
-				end
-			end
-		end
-	
-		-- Si encontramos la herramienta, equiparla y activarla
-		if tool then
-			humanoid:EquipTool(tool)
-	
-			-- Activar la herramienta
-			if tool:FindFirstChild("Activated") then
-				tool.Activated:Fire()  -- Si la herramienta tiene un evento Activated
-			elseif tool:IsA("Tool") and tool:FindFirstChild("Activate") then
-				tool:Activate()  -- Algunas herramientas tienen una función Activate
-			end
-			return true
-		else
-			return false
-		end
-	end
-	
-	-- Función para realizar la acción cuando se hace clic en el botón
-	local function onButtonClick()
-		local success = activateTool()  -- Activar la herramienta
-		if success then
-			enableMobileDesync()  -- Activar Mobile Desync
-		end
-	end
-	
-	-- Conectar el evento de clic al botón
-	button.MouseButton1Click:Connect(onButtonClick)
-	
+    local Players = game:GetService("Players")
+    local LocalPlayer = Players.LocalPlayer
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
+    
+    local TOOL_NAME = "Quantum Cloner"
+    local button = script.Parent
+    
+    local isEnabled = false
+    local OFF_COLOR = Color3.fromRGB(255,255,255)
+    local ON_COLOR = Color3.fromRGB(0, 255, 0)
+    
+    -- Function to activate the Quantum Cloner
+    local function activateCloner()
+        local success, error = pcall(function()
+            local backpack = LocalPlayer:WaitForChild("Backpack")
+            local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+            local humanoid = character:WaitForChild("Humanoid")
+    
+            local packages = ReplicatedStorage:WaitForChild("Packages", 5)
+            if not packages then warn("Packages folder not found") return false end
+    
+            local netFolder = packages:WaitForChild("Net", 5)
+            if not netFolder then warn("Net folder not found") return false end
+    
+            local useItemRemote = netFolder:WaitForChild("RE/UseItem", 5)
+            local teleportRemote = netFolder:WaitForChild("RE/QuantumCloner/OnTeleport", 5)
+            if not useItemRemote or not teleportRemote then warn("Required remotes not found") return false end
+    
+            -- Find the tool
+            local tool
+            for _, item in ipairs(backpack:GetChildren()) do
+                if item:IsA("Tool") and (item.Name:lower():find("cloner") or item.Name:lower():find("quantum")) then
+                    tool = item
+                    break
+                end
+            end
+            
+            -- Also check character
+            if not tool then
+                for _, item in ipairs(character:GetChildren()) do
+                    if item:IsA("Tool") then
+                        tool = item
+                        break
+                    end
+                end
+            end
+    
+            if tool then
+                if tool.Parent == backpack then
+                    humanoid:EquipTool(tool)
+                end
+                
+                -- Activate desync
+                if setfflag then 
+                    setfflag("WorldStepMax", "-9999999999") 
+                end
+                
+                useItemRemote:FireServer()
+                teleportRemote:FireServer()
+                
+                if setfflag then 
+                    setfflag("WorldStepMax", "-1") 
+                end
+                return true
+            else
+                warn("Quantum Cloner tool not found in inventory")
+                return false
+            end
+        end)
+    
+        if not success then
+            warn("Cloner activation failed: " .. tostring(error))
+            return false
+        end
+        return success
+    end
+    
+    -- Toggle function
+    local function toggleCloner()
+        if isEnabled then
+            -- Turn OFF
+            button.TextColor3 = OFF_COLOR
+            isEnabled = false
+        else
+            -- Turn ON and activate
+            button.TextColor3 = ON_COLOR
+            isEnabled = true
+            
+            -- Actually run the cloner functionality
+            local activated = activateCloner()
+            
+            if not activated then
+                -- If failed, reset toggle
+                button.TextColor3 = OFF_COLOR
+                isEnabled = false
+            end
+        end
+    end
+    
+    -- Connect the button
+    button.MouseButton1Click:Connect(toggleCloner)
+    
 end;
 task.spawn(C_149);
+
 -- StarterGui.ScreenGui.mobile
 local function C_14c()
 local script = G2L["14c"];
