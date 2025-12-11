@@ -537,6 +537,7 @@ end)
 -- NUCLEAR OPTION - Delete all other dragging code and use this
 local offset = Vector2.new(0, 0)
 local isDragging = false
+local wasHovering = false
 
 UIS.InputBegan:Connect(function(input, gameProcessed)
     if input.UserInputType == Enum.UserInputType.MouseButton1 or 
@@ -550,6 +551,16 @@ UIS.InputBegan:Connect(function(input, gameProcessed)
            mousePos.Y >= buttonPos.Y and mousePos.Y <= buttonPos.Y + buttonSize.Y then
             isDragging = true
             offset = buttonPos - mousePos
+            
+            -- STOP ALL ANIMATIONS WHILE DRAGGING
+            wasHovering = highlightEffect.Visible
+            hideBlueGlow()
+            stopPulse()
+            toolStroke.Color = Color3.fromRGB(0, 170, 255) -- Keep blue while dragging
+            
+            -- Visual feedback for dragging
+            toolStroke.Thickness = 1
+            mainToolButton.Size = UDim2.new(0, 56, 0, 56)
         end
     end
 end)
@@ -557,6 +568,27 @@ end)
 UIS.InputEnded:Connect(function(input)
     if input.UserInputType == Enum.UserInputType.MouseButton1 or 
        input.UserInputType == Enum.UserInputType.Touch then
+        
+        if isDragging then
+            -- Restore visual when dragging ends
+            toolStroke.Thickness = 3
+            mainToolButton.Size = UDim2.new(0, 60, 0, 60)
+            
+            -- Check if we should restore hover effects
+            local mousePos = UIS:GetMouseLocation()
+            local buttonPos = mainToolButton.AbsolutePosition
+            local buttonSize = mainToolButton.AbsoluteSize
+            
+            -- If mouse is still over button after drag, restore hover
+            if mousePos.X >= buttonPos.X and mousePos.X <= buttonPos.X + buttonSize.X and
+               mousePos.Y >= buttonPos.Y and mousePos.Y <= buttonPos.Y + buttonSize.Y then
+                if not toolEnabled then
+                    showBlueGlow()
+                    pulseHighlight()
+                end
+            end
+        end
+        
         isDragging = false
     end
 end)
@@ -567,6 +599,27 @@ UIS.InputChanged:Connect(function(input)
         local newPos = input.Position + offset
         mainToolButton.Position = UDim2.new(0, newPos.X, 0, newPos.Y)
     end
+end)
+
+-- Stop hover effects when dragging starts
+mainToolButton.MouseEnter:Connect(function()
+    if isDragging then return end -- Skip hover effects while dragging
+    
+    if not toolEnabled then
+        showBlueGlow()
+        pulseHighlight()
+    end
+    toolStroke.Color = Color3.fromRGB(0, 170, 255)
+end)
+
+mainToolButton.MouseLeave:Connect(function()
+    if isDragging then return end -- Skip hover effects while dragging
+    
+    if not toolEnabled then
+        hideBlueGlow()
+        stopPulse()
+    end
+    toolStroke.Color = Color3.fromRGB(80, 80, 80)
 end)
 
 -- Tool tips on hover
