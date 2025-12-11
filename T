@@ -534,28 +534,38 @@ UIS.InputBegan:Connect(function(input, gameProcessed)
     end
 end)
 
--- Make tool draggable - BULLETPROOF
-local dragging = false
+-- NUCLEAR OPTION - Delete all other dragging code and use this
 local offset = Vector2.new(0, 0)
+local isDragging = false
 
-mainToolButton.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-        dragging = true
-        offset = mainToolButton.AbsolutePosition - input.Position
+UIS.InputBegan:Connect(function(input, gameProcessed)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or 
+       input.UserInputType == Enum.UserInputType.Touch then
+        local mousePos = input.Position
+        local buttonPos = mainToolButton.AbsolutePosition
+        local buttonSize = mainToolButton.AbsoluteSize
+        
+        -- Check if click/touch is inside the button
+        if mousePos.X >= buttonPos.X and mousePos.X <= buttonPos.X + buttonSize.X and
+           mousePos.Y >= buttonPos.Y and mousePos.Y <= buttonPos.Y + buttonSize.Y then
+            isDragging = true
+            offset = buttonPos - mousePos
+        end
     end
 end)
 
-mainToolButton.InputEnded:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-        dragging = false
+UIS.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or 
+       input.UserInputType == Enum.UserInputType.Touch then
+        isDragging = false
     end
 end)
 
 UIS.InputChanged:Connect(function(input)
-    if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
-        mainToolButton.Position = UDim2.new(0, input.Position.X + offset.X, 0, input.Position.Y + offset.Y)
-    elseif dragging and input.UserInputType == Enum.UserInputType.TouchMovement then
-        mainToolButton.Position = UDim2.new(0, input.Position.X + offset.X, 0, input.Position.Y + offset.Y)
+    if isDragging and (input.UserInputType == Enum.UserInputType.MouseMovement or 
+                      input.UserInputType == Enum.UserInputType.TouchMovement) then
+        local newPos = input.Position + offset
+        mainToolButton.Position = UDim2.new(0, newPos.X, 0, newPos.Y)
     end
 end)
 
