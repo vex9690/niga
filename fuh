@@ -1,12 +1,1713 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+-- Load WindUI
+local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
-]]--
+-- Get player info
+local player = game.Players.LocalPlayer
+local playerName = player.Name
+local playerDisplayName = player.DisplayName
 
-local v0=tonumber;local v1=string.byte;local v2=string.char;local v3=string.sub;local v4=string.gsub;local v5=string.rep;local v6=table.concat;local v7=table.insert;local v8=math.ldexp;local v9=getfenv or function() return _ENV;end ;local v10=setmetatable;local v11=pcall;local v12=select;local v13=unpack or table.unpack ;local v14=tonumber;local function v15(v16,v17,...) local v18=1;local v19;v16=v4(v3(v16,5),"..",function(v30) if (v1(v30,2)==81) then local v85=0;while true do if (v85==0) then v19=v0(v3(v30,1,1));return "";end end else local v86=0;local v87;while true do if (v86==0) then v87=v2(v0(v30,16));if v19 then local v127=0;local v128;while true do if (v127==1) then return v128;end if (v127==0) then v128=v5(v87,v19);v19=nil;v127=1;end end else return v87;end break;end end end end);local function v20(v31,v32,v33) if v33 then local v88=(v31/((929 -(214 + 713))^(v32-(2 -1))))%((1 + 1)^(((v33-(1 + 0)) -(v32-((119 -(32 + 85)) -(1 + 0)))) + (1 -(0 + 0)))) ;return v88-(v88%(2 -1)) ;else local v89=0;local v90;while true do if (v89==(0 -0)) then v90=(621 -(555 + (278 -214)))^(v32-(1271 -(226 + 1044))) ;return (((v31%(v90 + v90))>=v90) and ((1889 -(892 + 65)) -(857 + 74))) or (568 -(367 + (479 -278))) ;end end end end local function v21() local v34=v1(v16,v18,v18);v18=v18 + 1 ;return v34;end local function v22() local v35,v36=v1(v16,v18,v18 + (3 -1) );v18=v18 + 2 ;return (v36 * (469 -213)) + v35 ;end local function v23() local v37,v38,v39,v40=v1(v16,v18,v18 + (353 -(87 + 263)) );v18=v18 + ((731 -547) -(67 + 113)) ;return (v40 * (12302277 + 4474939)) + (v39 * (160901 -95365)) + (v38 * (189 + 67)) + v37 ;end local function v24() local v41=v23();local v42=v23();local v43=953 -(802 + 150) ;local v44=(v20(v42,2 -1 ,(114 -78) -16 ) * ((2 + 0)^(1029 -(915 + 82)))) + v41 ;local v45=v20(v42,59 -38 ,9 + 10 + 12 );local v46=((v20(v42,(72 -31) -9 )==(1188 -(1069 + 118))) and  -(2 -1)) or (1 -(438 -(145 + 293))) ;if (v45==(0 + 0)) then if (v44==0) then return v46 * 0 ;else v45=1;v43=0 -0 ;end elseif (v45==(2031 + (446 -(44 + 386)))) then return ((v44==((2277 -(998 + 488)) -(368 + 423))) and (v46 * ((3 -2)/(18 -(10 + 3 + 5))))) or (v46 * NaN) ;end return v8(v46,v45-1023 ) * (v43 + (v44/(((6 + 1) -5)^(494 -(416 + 26))))) ;end local function v25(v47) local v48;if  not v47 then local v91=772 -(201 + (2027 -1456)) ;while true do if (v91==(1138 -((975 -(814 + 45)) + 1022))) then v47=v23();if (v47==((0 -0) -0)) then return "";end break;end end end v48=v3(v16,v18,(v18 + v47) -(1 + 0) );v18=v18 + v47 ;local v49={};for v66=3 -2 , #v48 do v49[v66]=v2(v1(v3(v48,v66,v66)));end return v6(v49);end local v26=v23;local function v27(...) return {...},v12("#",...);end local function v28() local v50=(function() return function(v92,v93,v94,v95,v96,v97,v98,v99) local v92=(function() return 0 -0 ;end)();local v93=(function() return;end)();local v94=(function() return;end)();while true do if (v92== #",") then if (v93== #"|") then v94=(function() return v95()~=(0 + 0) ;end)();elseif (v93==(5 -3)) then v94=(function() return v96();end)();elseif (v93~= #"xnx") then else v94=(function() return v97();end)();end v98[v99]=(function() return v94;end)();break;end if (v92==0) then local v123=(function() return 0;end)();local v124=(function() return;end)();while true do if (v123~=(0 + 0)) then else v124=(function() return 1500 -(1408 + 92) ;end)();while true do if (v124~=(285 -(134 + 151))) then else v93=(function() return v95();end)();v94=(function() return nil;end)();v124=(function() return 1;end)();end if (1==v124) then v92=(function() return  #"\\";end)();break;end end break;end end end end return v92,v93,v94,v95,v96,v97,v98,v99;end;end)();local v51=(function() return function(v100,v101,v102,v103,v104,v105,v106,v107,v108) local v109=(function() return 1665 -(970 + 695) ;end)();local v100=(function() return;end)();local v101=(function() return;end)();while true do if (v109~=(1 -0)) then else local v125=(function() return 0;end)();while true do if (v125==(1990 -(582 + 1408))) then local v129=(function() return 0;end)();while true do if (v129==(0 -0)) then while true do if (v100~=(0 + 0)) then else v101=(function() return v102();end)();if (v103(v101, #"!", #",")~=(0 + 0)) then else local v220=(function() return 0;end)();local v221=(function() return;end)();local v222=(function() return;end)();local v223=(function() return;end)();local v224=(function() return;end)();while true do if (1~=v220) then else local v363=(function() return 0 + 0 ;end)();while true do if (v363~=0) then else v223=(function() return nil;end)();v224=(function() return nil;end)();v363=(function() return 1 -0 ;end)();end if (v363~=(1 + 0)) then else v220=(function() return 7 -5 ;end)();break;end end end if (v220==(1826 -(1195 + 629))) then while true do if (v221~= #"asd") then else if (v103(v223, #"-19", #"asd")~= #".") then else v224[ #".dev"]=(function() return v104[v224[ #".dev"]];end)();end v105[v106]=(function() return v224;end)();break;end if ((2 -0)==v221) then local v401=(function() return 241 -(187 + 54) ;end)();local v402=(function() return;end)();while true do if (v401==0) then v402=(function() return 0;end)();while true do if (v402~=(0 + 0)) then else if (v103(v223, #">", #"|")== #"~") then v224[2]=(function() return v104[v224[782 -(162 + 618) ]];end)();end if (v103(v223,2 + 0 ,2 + 0 )~= #"[") then else v224[ #"xxx"]=(function() return v104[v224[ #"91("]];end)();end v402=(function() return 1 -0 ;end)();end if (v402==(1 -0)) then v221=(function() return  #"19(";end)();break;end end break;end end end if (v221~= #"<") then else local v403=(function() return 0;end)();local v404=(function() return;end)();while true do if (v403~=(0 + 0)) then else v404=(function() return 1636 -(1373 + 263) ;end)();while true do if (v404~=(1001 -(451 + 549))) then else v221=(function() return 5 -3 ;end)();break;end if (v404==0) then v224=(function() return {v107(),v107(),nil,nil};end)();if (v222==(1900 -(106 + 1794))) then local v425=(function() return 0 + 0 ;end)();local v426=(function() return;end)();while true do if (v425~=(0 + 0)) then else v426=(function() return 0 + 0 ;end)();while true do if (v426==(0 -0)) then v224[ #"19("]=(function() return v107();end)();v224[ #"0313"]=(function() return v107();end)();break;end end break;end end elseif (v222== #",") then v224[ #"xnx"]=(function() return v108();end)();elseif (v222==2) then v224[ #"19("]=(function() return v108() -((2 -0)^16) ;end)();elseif (v222== #"19(") then local v431=(function() return 1384 -(746 + 638) ;end)();local v432=(function() return;end)();while true do if (v431~=0) then else v432=(function() return 0 -0 ;end)();while true do if (v432~=(0 + 0)) then else v224[ #"xxx"]=(function() return v108() -((116 -(4 + 110))^(23 -7)) ;end)();v224[ #"xnxx"]=(function() return v107();end)();break;end end break;end end end v404=(function() return 342 -(218 + 123) ;end)();end end break;end end end if (v221~=(1581 -(1535 + 46))) then else local v405=(function() return 0 + 0 ;end)();while true do if (v405==(0 + 0)) then v222=(function() return v103(v101,105 -(17 + 86) , #"nil");end)();v223=(function() return v103(v101, #"0836",5 + 1 );end)();v405=(function() return 561 -(306 + 254) ;end)();end if (v405==(1 + 0)) then v221=(function() return  #",";end)();break;end end end end break;end if (v220~=0) then else local v364=(function() return 0 -0 ;end)();local v365=(function() return;end)();while true do if ((1467 -(899 + 568))==v364) then v365=(function() return 0 + 0 ;end)();while true do if ((2 -1)~=v365) then else v220=(function() return 3 -2 ;end)();break;end if (v365~=(0 + 0)) then else v221=(function() return 0;end)();v222=(function() return nil;end)();v365=(function() return 1 + 0 ;end)();end end break;end end end end end break;end end return v100,v101,v102,v103,v104,v105,v106,v107,v108;end end end end end if (v109==(603 -(268 + 335))) then local v126=(function() return 0 -0 ;end)();while true do if (v126~=(290 -(60 + 230))) then else v100=(function() return 572 -(426 + 146) ;end)();v101=(function() return nil;end)();v126=(function() return 1;end)();end if ((1 + 0)~=v126) then else v109=(function() return 1457 -(282 + 1174) ;end)();break;end end end end end;end)();local v52=(function() return function(v110,v111,v112) local v113=(function() return 811 -(569 + 242) ;end)();local v114=(function() return;end)();while true do if (v113==(0 -0)) then v114=(function() return 0 + 0 ;end)();while true do if (v114~=(1024 -(706 + 318))) then else local v130=(function() return 1251 -(721 + 530) ;end)();while true do if (v130==(1271 -(945 + 326))) then v110[v111-#"!" ]=(function() return v112();end)();return v110,v111,v112;end end end end break;end end end;end)();local v53=(function() return {};end)();local v54=(function() return {};end)();local v55=(function() return {};end)();local v56=(function() return {v53,v54,nil,v55};end)();local v57=(function() return v23();end)();local v58=(function() return {};end)();for v68= #" ",v57 do FlatIdent_5ED46,Type,Cons,v21,v24,v25,v58,v68=(function() return v50(FlatIdent_5ED46,Type,Cons,v21,v24,v25,v58,v68);end)();end v56[ #"-19"]=(function() return v21();end)();for v69= #",",v23() do FlatIdent_51F42,Descriptor,v21,v20,v58,v53,v69,v22,v23=(function() return v51(FlatIdent_51F42,Descriptor,v21,v20,v58,v53,v69,v22,v23);end)();end for v70= #"\\",v23() do v54,v70,v28=(function() return v52(v54,v70,v28);end)();end return v56;end local function v29(v60,v61,v62) local v63=v60[33 -(19 + 13) ];local v64=v60[(170 -(28 + 141)) + 1 ];local v65=v60[416 -(15 + 398) ];return function(...) local v71=v63;local v72=v64;local v73=v65;local v74=v27;local v75=983 -(18 + 964) ;local v76= -(3 -2);local v77={};local v78={...};local v79=v12("#",...) -(1 + 0) ;local v80={};local v81={};for v115=850 -(20 + 830) ,v79 do if ((1724==1724) and (v115>=v73)) then v77[v115-v73 ]=v78[v115 + 1 + 0 ];else v81[v115]=v78[v115 + ((50 + 77) -(116 + 10)) ];end end local v82=(v79-v73) + 1 + 0 ;local v83;local v84;while true do v83=v71[v75];v84=v83[739 -(542 + 196) ];if ((v84<=((109 -20) -47)) or (3807<2720)) then if ((455<=1282) and (v84<=(11 + 9))) then if (v84<=(3 + 6)) then if (v84<=(3 + 1)) then if (v84<=(1 + 0)) then if (v84==(0 -0)) then if ((4606<4876) and v81[v83[2 + 0 ]]) then v75=v75 + (2 -1) ;else v75=v83[1099 -(709 + 387) ];end else local v132=v83[1861 -(673 + 1185) ];local v133=v81[v132];for v212=v132 + (1552 -(1126 + 425)) ,v83[(290 + 119) -((1435 -(486 + 831)) + (746 -459)) ] do v133=v133   .. v81[v212] ;end v81[v83[7 -5 ]]=v133;end elseif (v84<=(1123 -(118 + 1003))) then do return;end elseif (v84==((27 -19) -5)) then local v226=v83[(72 + 307) -(142 + 235) ];local v227,v228=v74(v81[v226](v13(v81,v226 + (1 -0) ,v83[13 -10 ])));v76=(v228 + v226) -(1 + 0) ;local v229=0 -0 ;for v305=v226,v76 do v229=v229 + (1 -0) ;v81[v305]=v227[v229];end else v81[v83[1 + 1 ]]={};end elseif ((v84<=6) or (1442>2640)) then if (v84>(982 -(553 + 424))) then v81[v83[1285 -(1040 + 243) ]]=v81[v83[5 -(6 -4) ]][v83[4 + 0 ]];else v81[v83[(1265 -(668 + 595)) + 0 ]][v83[2 + 0 + 1 ]]=v81[v83[458 -(13 + 441) ]];end elseif ((136<3668) and (v84<=(3 + 4))) then local v139=0 + 0 ;local v140;local v141;while true do if ((v139==(2 -1)) or (1784>4781)) then for v334=2 -1 , #v80 do local v335=0 + 0 ;local v336;while true do if (v335==((0 + 0) -0)) then v336=v80[v334];for v406=(0 -0) + 0 , #v336 do local v407=v336[v406];local v408=v407[1];local v409=v407[9 -7 ];if ((v408==v81) and (v409>=v140)) then local v414=753 -(239 + (804 -(23 + 267))) ;while true do if ((4585>3298) and (v414==((1944 -(1129 + 815)) + 0))) then v141[v409]=v408[v409];v407[(1717 -(371 + 16)) -((2547 -(1326 + 424)) + 532) ]=v141;break;end end end end break;end end end break;end if (v139==(0 + 0)) then v140=v83[(5 -2) -1 ];v141={};v139=(3 -2) + 0 ;end end elseif (v84==(3 + 5)) then if (v83[4 -2 ]==v81[v83[(1324 -(88 + 30)) -(373 + (1600 -(720 + 51))) ]]) then v75=v75 + (732 -(476 + 255)) ;else v75=v83[1133 -(369 + 761) ];end else local v231=v83[2];local v232=v81[v231];local v233=v81[v231 + 2 ];if ((v233>(0 + 0)) or (1664>1698)) then if ((v232>v81[v231 + (2 -1) ]) or (4759<4158)) then v75=v83[3 + 0 ];else v81[v231 + (5 -2) ]=v232;end elseif (v232<v81[v231 + (1 -0) ]) then v75=v83[241 -(64 + 174) ];else v81[v231 + 1 + 2 ]=v232;end end elseif (v84<=(20 -6)) then if ((v84<=(347 -((319 -175) + (1968 -(421 + 1355))))) or (3427<2849)) then if ((3616<=4429) and (203==203) and (v84==(226 -(42 + 174)))) then v81[v83[(2 -0) + 0 ]]=v29(v72[v83[3 + 0 ]],nil,v62);else local v143=0 + 0 ;local v144;local v145;while true do if ((3988>=66) and ((v143==(1504 -(363 + 561 + 580))) or (394>=4341))) then v144=v83[1582 -(1183 + 397) ];v145={};v143=2 -1 ;end if (((3467>=2912) and (v143==(1 + 0))) or (862>4644)) then for v338=1 + 0 , #v80 do local v339=v80[v338];for v366=86 -(84 + 2) , #v339 do local v367=v339[v366];local v368=v367[1976 -(1913 + 62) ];local v369=v367[2 + 0 ];if ((v368==v81) and (v369>=v144)) then local v394=0 -(1083 -(286 + 797)) ;while true do if (v394==0) then v145[v369]=v368[v369];v367[1934 -(565 + 1368) ]=v145;break;end end end end end break;end end end elseif ((1221==1221) and (v84<=(45 -33))) then v81[v83[1663 -(1477 + 184) ]]=v62[v83[(10 -7) -0 ]];elseif ((v84==(13 + 0)) or (2946<1596)) then v81[v83[858 -(564 + 292) ]]=v83[4 -1 ];else local v236=v83[5 -3 ];v81[v236](v13(v81,v236 + 1 + 0 ,v76));end elseif (v84<=17) then if (((4433>3127) and (v84<=15)) or (45>1271)) then if ((3877>1530) and (v81[v83[306 -(244 + 60) ]]==v83[(6 -2) + 0 ])) then v75=v75 + (477 -(41 + 435)) ;else v75=v83[442 -(397 + 42) ];end elseif (v84==(1017 -(938 + 63))) then local v238=v83[2 + 0 ];v81[v238](v81[v238 + (1126 -(936 + 189)) ]);else local v239=0 + 0 + 0 ;local v240;while true do if (v239==(1613 -(1565 + 48))) then v240=v83[(802 -(24 + 776)) + (0 -0) ];do return v13(v81,v240,v240 + v83[1141 -(782 + 356) ] );end break;end end end elseif (v84<=(5 + 13)) then local v148=v83[269 -(176 + 91) ];local v149=v81[v148 + (4 -(787 -(222 + 563))) ];local v150=v81[v148] + v149 ;v81[v148]=v150;if ((v149>(0 -0)) or (4798==1255)) then if ((4300>=2733) and (v150<=v81[v148 + (1093 -(975 + 117)) ])) then v75=v83[1878 -(157 + 1718) ];v81[v148 + 3 + (0 -0) ]=v150;end elseif (v150>=v81[v148 + (3 -2) ]) then local v342=0 -0 ;while true do if ((v342==(1018 -(697 + 232 + 89))) or (2541>2860)) then v75=v83[7 -4 ];v81[v148 + ((195 -(23 + 167)) -2) ]=v150;break;end end end elseif (v84>(43 -(1822 -(690 + 1108)))) then local v241=0;local v242;while true do if (v241==(0 + 0)) then v242=v83[3 -1 ];v81[v242](v81[v242 + (2 -1) ]);break;end end else local v243=v83[1229 -(322 + 905) ];local v244,v245=v74(v81[v243](v81[v243 + (612 -(602 + 9)) ]));v76=(v245 + v243) -(1190 -(449 + 740)) ;local v246=872 -(826 + 46) ;for v310=v243,v76 do local v311=947 -(245 + 702) ;while true do if ((v311==(0 -0)) or (2902>3629)) then v246=v246 + 1 + 0 ;v81[v310]=v244[v246];break;end end end end elseif (v84<=(1929 -(260 + 1638))) then if (v84<=(10 + 15)) then if ((4829==4829) and (v84<=(462 -(382 + 58)))) then if (v84==(67 -46)) then v81[v83[2]][v81[v83[257 -(79 + 175) ]]]=v83[4];else do return v81[v83[2 + 0 ]];end end elseif (v84<=(46 -23)) then local v154=0 -0 ;local v155;while true do if ((427<3468) and (v154==(1205 -(745 + 157 + 303)))) then v155=v83[3 -(849 -(40 + 808)) ];do return v13(v81,v155,v76);end break;end end elseif (v84==24) then local v247=v83[4 -2 ];local v248=v81[v247];local v249=v81[v247 + 1 + 1 ];if (v249>(1690 -(1121 + 569))) then if (v248>v81[v247 + (215 -(22 + 192)) ]) then v75=v83[686 -(483 + 200) ];else v81[v247 + (1466 -(1404 + 59)) ]=v248;end elseif (v248<v81[v247 + (2 -1) ]) then v75=v83[(1 + 2) -(0 -0) ];else v81[v247 + (768 -(468 + 297)) ]=v248;end else v81[v83[564 -(334 + 218 + 10) ]]=v61[v83[10 -7 ]];end elseif (v84<=(64 -36)) then if ((4190>=2804) and (1683<=4726) and (v84<=(46 -20))) then v81[v83[2 + 0 ]]=v81[v83[1 + 2 ]]%v83[240 -(141 + 95) ] ;elseif ((2086==2086) and (v84>(4 + 23))) then v81[v83[2 + 0 ]]=v81[v83[7 -4 ]] + v83[9 -5 ] ;else local v253=v83[1 + 1 ];v81[v253]=v81[v253](v13(v81,v253 + (2 -1) ,v83[1138 -(832 + 303) ]));end elseif ((4148>2733) and (v84<=(12 + 9 + 8))) then local v157=0 + 0 + 0 ;local v158;local v159;local v160;local v161;while true do if ((3054>=1605) and (v157==(1 + 0))) then v76=(v160 + v158) -1 ;v161=0 -0 ;v157=2 + 0 ;end if (((736 -(47 + 524)) -(92 + 47 + 24))==v157) then for v343=v158,v76 do local v344=(0 -0) -0 ;while true do if ((0 + 0)==v344) then v161=v161 + (1 -0) ;v81[v343]=v159[v161];break;end end end break;end if (v157==(765 -(574 + 191))) then v158=v83[2 + 0 ];v159,v160=v74(v81[v158](v81[v158 + (2 -1) ]));v157=1 + 0 ;end end elseif ((1044<1519) and (v84>(879 -(254 + (889 -294))))) then local v255=v83[(291 -163) -(55 + (1797 -(1165 + 561))) ];v81[v255]=v81[v255](v13(v81,v255 + (1 -0) ,v76));else v81[v83[1792 -(18 + 555 + 1217) ]]=v81[v83[8 -5 ]] + v83[1 + 3 ] ;end elseif (v84<=(57 -21)) then if ((1707<=4200) and (v84<=(16 + 17))) then if (v84>(1180 -(556 + 592))) then v81[v83[1 + (3 -2) ]]=v81[v83[942 -(714 + 225) ]]%v81[v83[812 -(329 + 479) ]] ;elseif  not v81[v83[5 -3 ]] then v75=v75 + 1 ;else v75=v83[(2 + 1) -0 ];end elseif (v84<=(70 -36)) then local v163=v83[(480 -(341 + 138)) + 1 ];local v164,v165=v74(v81[v163](v13(v81,v163 + (1 -0) ,v76)));v76=(v165 + v163) -((218 + 589) -(118 + 688)) ;local v166=48 -(25 + 23) ;for v213=v163,v76 do v166=v166 + 1 + 0 ;v81[v213]=v164[v166];end elseif ((580==580) and (v84>(1921 -(927 + 959)))) then local v259=v83[6 -4 ];v81[v259]=v81[v259]();else local v261=v83[2 + 0 ];v81[v261](v13(v81,v261 + (733 -(16 + 716)) ,v76));end elseif ((4835>=3669) and (v84<=(74 -35))) then if ((2851>1859) and (v84<=(134 -(11 + 86)))) then local v167=v83[2];v81[v167]=v81[v167](v81[v167 + (2 -1) ]);elseif (v84>(323 -(175 + 110))) then v81[v83[2 + 0 ]]= #v81[v83[3 + (0 -0) ]];else v81[v83[1547 -(320 + 1225) ]]=v83[3] + v81[v83[9 -5 ]] ;end elseif ((601<=999) and (v84<=(197 -157))) then v81[v83[1798 -(503 + 1293) ]]=v81[v83[1467 -(157 + 1307) ]][v83[11 -7 ]];elseif (v84>(30 + 11)) then v81[v83[1063 -(810 + 251) ]]=v81[v83[1 + 2 ]]%v83[3 + (327 -(89 + 237)) ] ;else v75=v83[1 + 2 ];end elseif (v84<=((186 -128) + 6)) then if (v84<=(586 -(43 + 490))) then if (v84<=((6 -3) + 44)) then if (v84<=(777 -(711 + 22))) then if (v84>43) then v61[v83[3]]=v81[v83[7 -5 ]];else local v173=v83[2 -0 ];do return v81[v173](v13(v81,v173 + ((1186 -(581 + 300)) -(300 + 4)) ,v83[1223 -(855 + 365) ]));end end elseif ((3970==3970) and (v84<=(904 -(240 + 619)))) then v81[v83[1 + 1 ]]=v61[v83[4 -1 ]];elseif ((v84>(4 + 42)) or (98==208)) then local v266=v83[1 + (2 -1) ];local v267=v81[v83[(571 + 1176) -(1344 + 400) ]];v81[v266 + (406 -(255 + 150)) ]=v267;v81[v266]=v267[v83[(1239 -(1030 + 205)) + 0 ]];else v81[v83[2 + 0 ]]=v83[12 -9 ]~=(0 -0) ;end elseif ((3848>2323) and (v84<=(38 + 12 + 0))) then if ((2006<=3914) and (v84<=(1787 -(404 + 1335)))) then local v176=1414 -(1001 + 413) ;local v177;local v178;local v179;local v180;while true do if ((v176==((378 + 28) -(183 + 223))) or (3101<=2971)) then v177=v83[884 -(244 + 638) ];v178,v179=v74(v81[v177](v13(v81,v177 + (1 -0) ,v83[2 + 1 ])));v176=1 + 0 ;end if (((2836>469) and (v176==(1907 -(1665 + 241)))) or (2073<=671)) then v76=(v179 + v177) -(338 -(10 + 327)) ;v180=0 + 0 ;v176=(626 -(156 + 130)) -(118 + 220) ;end if ((v176==(1 + 1)) or (2096<=540)) then for v345=v177,v76 do v180=v180 + (2 -1) ;v81[v345]=v178[v180];end break;end end elseif ((v84>((1131 -633) -(108 + 341))) or (3183<2645)) then local v272=0 + 0 ;local v273;local v274;local v275;while true do if ((3305>95) and (2==v272)) then if ((2727==2727) and (v274>(1099 -(35 + 1064)))) then if ((v275<=v81[v273 + (4 -3) ]) or (2970>=4072)) then v75=v83[6 -3 ];v81[v273 + (1496 -((1197 -486) + 782)) ]=v275;end elseif ((3230<=3760) and (v275>=v81[v273 + (1 -0) ])) then local v412=469 -(270 + 199) ;while true do if ((3881>814) and (v412==(0 + 0))) then v75=v83[1669 -(636 + 1030) ];v81[v273 + (1822 -(580 + 1239)) ]=v275;break;end end end break;end if ((3828==3828) and ((0 + 0)==v272)) then v273=v83[(10 -5) -(1 + 2) ];v274=v81[v273 + 2 + 0 ];v272=1 + 0 ;end if (v272==(1 + 0)) then v275=v81[v273] + v274 ;v81[v273]=v275;v272=1 + 1 ;end end else local v276=v83[4 -2 ];v81[v276]=v81[v276]();end elseif ((v84<=(32 + 19)) or (4932<4868)) then v81[v83[(682 + 487) -(645 + (591 -(10 + 59))) ]]=v83[1793 -(1010 + 780) ]~=(0 + 0) ;elseif (v84>(247 -195)) then v81[v83[5 -(1 + 2) ]][v81[v83[1839 -(1045 + 791) ]]]=v81[v83[2 + (9 -7) ]];else local v280=0 -0 ;local v281;while true do if (v280==((1163 -(671 + 492)) -0)) then v281=v83[507 -(280 + 71 + 154) ];v81[v281](v13(v81,v281 + (1575 -(1281 + 293)) ,v83[269 -(28 + 238) ]));break;end end end elseif ((3667<=4802) and (554==554) and (v84<=(31 + 27))) then if (v84<=(122 -67)) then if (v84==(1613 -(1381 + 178))) then v75=v83[688 -(314 + 371) ];else local v183=0 + 0 ;local v184;local v185;local v186;while true do if (((1215 -(369 + 846)) + 0)==v183) then v184=v72[v83[10 -7 ]];v185=nil;v183=969 -(478 + 490) ;end if ((1260>=858) and ((v183==(1 + 1 + 0)) or (2563==172))) then for v348=3 -2 ,v83[3 + 1 ] do v75=v75 + (1380 -(1055 + 324)) ;local v349=v71[v75];if (v349[1]==(530 -(381 + 89))) then v186[v348-(1 + 0) ]={v81,v349[4 -1 ]};else v186[v348-(1157 -(1074 + 82)) ]={v61,v349[1458 -(990 + 465) ]};end v80[ #v80 + 1 ]=v186;end v81[v83[1 + 1 ]]=v29(v184,v185,v62);break;end if (v183==(1 + 0 + 0)) then v186={};v185=v10({},{__index=function(v351,v352) local v353=0 -0 ;local v354;while true do if ((3889>=131) and (v353==(0 + 0))) then v354=v186[v352];return v354[3 -2 ][v354[1728 -(1668 + 58) ]];end end end,__newindex=function(v355,v356,v357) local v358=v186[v356];v358[689 -(364 + 324) ][v358[628 -(512 + 114) ]]=v357;end});v183=2 -0 ;end end end elseif (v84<=56) then v81[v83[(208 -(11 + 192)) -3 ]]=v81[v83[5 -(2 + 0) ]];elseif (v84>((194 -(135 + 40)) + 38)) then v81[v83[6 -4 ]]=v83[(28 -16) -9 ] + v81[v83[2 + 2 + 0 ]] ;else v81[v83[1 + 1 ]]={};end elseif ((v84<=61) or (3911==4700)) then if ((v84<=(178 -(261 -142))) or (492==4578)) then local v189=v83[2 + (0 -0) ];v81[v189](v13(v81,v189 + (3 -2) ,v83[11 -8 ]));elseif ((3000<4194) and ((v84>(2054 -(109 + 1885))) or (4112<1816))) then local v284=1469 -(1269 + 200) ;local v285;while true do if (v284==(229 -((249 -(50 + 126)) + (434 -278)))) then v285=v83[(1 + 2) -(1414 -(1233 + 180)) ];v81[v285]=v81[v285](v13(v81,v285 + (812 -(721 + (1059 -(522 + 447)))) ,v83[818 -(98 + 717) ]));break;end end else v81[v83[(2249 -(107 + 1314)) -(802 + 24) ]]=v81[v83[5 -2 ]];end elseif (v84<=(77 -15)) then v81[v83[1 + 1 ]][v83[3 + 0 ]]=v81[v83[1 + 2 + 1 ]];elseif (v84>(11 + 52)) then v81[v83[1 + 1 ]]=v81[v83[3]]%v81[v83[11 -7 ]] ;elseif v81[v83[6 -4 ]] then v75=v75 + (514 -(203 + 310)) ;else v75=v83[2 + 1 ];end elseif (v84<=(31 + 44)) then if (v84<=(57 + 12)) then if ((4525>=1223) and (v84<=(48 + 18))) then if (v84==(31 + 34)) then local v192=v83[(2638 -1772) -(196 + 668) ];local v193,v194=v74(v81[v192](v13(v81,v192 + (1434 -(797 + 636)) ,v76)));v76=(v194 + v192) -(4 -3) ;local v195=1619 -(1427 + 192) ;for v216=v192,v76 do v195=v195 + ((40 + 54) -(4 + 89)) ;v81[v216]=v193[v195];end else v81[v83[1 + 1 ]]=v62[v83[6 -3 ]];end elseif ((1090<=4827) and (v84<=(61 + 6))) then v81[v83[1 + 1 ]]=v29(v72[v83[3]],nil,v62);elseif (v84>(394 -(192 + 134))) then if ((651<4442) and ( not v81[v83[1278 -(316 + 960) ]] or (239>1345))) then v75=v75 + 1 + 0 ;else v75=v83[1489 -(35 + 1451) ];end else local v289=(0 -0) + 0 ;local v290;while true do if ((v289==(1993 -(941 + 1052))) or (3710>=3738) or (195>=1804)) then v290=v83[2 + 0 ];do return v81[v290](v13(v81,v290 + 1 ,v83[3]));end break;end end end elseif ((v84<=(67 + 5)) or (3838<2061)) then if (v84<=(267 -197)) then v81[v83[553 -(83 + 468) ]]= #v81[v83[1809 -(1202 + 604) ]];elseif ((v84==(331 -260)) or (690>1172)) then local v291=v72[v83[(15 -11) -1 ]];local v292;local v293={};v292=v10({},{__index=function(v317,v318) local v319=v293[v318];return v319[2 -1 ][v319[327 -(45 + 280) ]];end,__newindex=function(v320,v321,v322) local v323=v293[v321];v323[1 + 0 ][v323[2 + 0 ]]=v322;end});for v325=1 + 0 ,v83[4] do v75=v75 + 1 + 0 ;local v326=v71[v75];if (v326[1 + 0 ]==60) then v293[v325-(1 -0) ]={v81,v326[1775 -(1733 + 39) ]};else v293[v325-(1 -(0 + 0)) ]={v61,v326[1037 -(125 + 909) ]};end v80[ #v80 + (1949 -(1096 + 852)) ]=v293;end v81[v83[2 + 0 ]]=v29(v291,v292,v62);else local v295=v83[(505 -(74 + 429)) + 0 ];v81[v295]=v81[v295](v81[v295 + 1 + 0 ]);end elseif (v84<=(179 -106)) then local v200=v83[2 -(0 -0) ];local v201=v81[v83[3 + 0 ]];v81[v200 + ((255 + 258) -(409 + 103)) ]=v201;v81[v200]=v201[v83[240 -(46 + (434 -244)) ]];elseif (v84==(169 -(51 + 44))) then v81[v83[1 + 1 ]][v81[v83[1320 -(1114 + 203) ]]]=v81[v83[730 -(228 + 498) ]];else for v328=v83[1 + 1 + 0 ],v83[2 + 1 ] do v81[v328]=nil;end end elseif ((v84<=80) or (1382>2216)) then if ((v84<=(740 -(174 + 489))) or (1592>2599) or (2861==2459)) then if (v84==(197 -121)) then do return;end else local v205=0 + 0 ;local v206;while true do if (v205==(1905 -((2558 -1728) + (2658 -1583)))) then v206=v83[526 -(303 + 221) ];v81[v206]=v81[v206](v13(v81,v206 + ((1703 -(279 + 154)) -(231 + 1038)) ,v76));break;end end end elseif ((3574<=4397) and (v84<=(65 + 13))) then if (v81[v83[1164 -(171 + 991) ]]==v83[16 -12 ]) then v75=v75 + ((780 -(454 + 324)) -(1 + 0)) ;else v75=v83[7 -4 ];end elseif ((1903<4021) and (v84>(64 + 15))) then v81[v83[1214 -(1090 + 122) ]][v81[v83[10 -7 ]]]=v83[11 -7 ];else do return v81[v83[2 -0 ]];end end elseif (v84<=(256 -173)) then if (v84<=(1199 -(628 + 490))) then local v207=v83[1251 -(111 + 1137) ];local v208=v81[v207];for v219=v207 + (159 -((108 -(12 + 5)) + 37 + 30)) ,v83[(27 -16) -(3 + 4) ] do v208=v208   .. v81[v219] ;end v81[v83[2]]=v208;elseif (((3135>1330) and (v84>((1114 -(277 + 816)) + 61))) or (2270>=4130)) then for v332=v83[(3315 -2539) -(431 + 343) ],v83[5 -2 ] do v81[v332]=nil;end else local v302=v83[5 -(1186 -(1058 + 125)) ];do return v13(v81,v302,v76);end end elseif ((2593<=3958) and (v84<=(607 -(423 + 100)))) then v81[v83[1 + 1 ]]=v83[7 -(1 + 3) ];elseif ((1176==1176) and ((v84>85) or (3900<=3641))) then v61[v83[2 + 1 ]]=v81[v83[773 -(326 + 445) ]];elseif (v83[8 -6 ]==v81[v83[8 -4 ]]) then v75=v75 + (2 -1) ;else v75=v83[714 -(530 + 181) ];end v75=v75 + ((1857 -(815 + 160)) -(614 + (1145 -878))) ;end end;end return v29(v28(),{},v17)(...);end return v15("LOL!7B3Q0003063Q00737472696E6703043Q006368617203043Q00627974652Q033Q0073756203053Q0062697433322Q033Q0062697403043Q0062786F7203053Q007461626C6503063Q00636F6E63617403063Q00696E73657274025Q0080464003053Q0097FFC0C53F03083Q001EDE92A1A25AAED2026Q00464003083Q00C2D0DF3CF2CCC23303043Q005D86A5AD025Q0080454003073Q008E77B79436A36C03053Q0053CD18D9E0026Q004540030E3Q0063C526DF0B55C875F50A51C521D903053Q006427AC55BC025Q0080444003053Q0098A00548B303073Q00AFCCC97124D68B026Q00424003093Q00A7004675FD52F4890803073Q0080EC653F268421025Q00804140030D3Q00E61A0AD6BB7E83C63508DAB86F03073Q00E6B47F67B3D61C026Q004140030A3Q00032Q9249349C083A379503083Q007045E4DF2C64E871025Q00802Q4003063Q0084D306F96CF303063Q0096CDBD709018026Q002Q4003073Q003FE3B9B2A0B8A303073Q00C77A8DD8D0CCDD026Q003F4003073Q00A525DE11E8932803053Q0087E14CAD72026Q003E4003073Q00343EB33A42322D03073Q00497150D2582E57026Q003D4003133Q00E0008CF1C3C41A90F6DECA008CC4CBD5068CF003053Q00AAA36FE297026Q003C4003263Q00080287C7B93D4E88C9A3364EA6CFB93B0190C2EA3E019086A6391A87D5BE781887D4B931018C03053Q00CA586EE2A6026Q003B40030F3Q00FEE930B6AFF00CE1F333A6AFEA07D703073Q006BB28651D2C69E026Q003A40030F3Q008DF9DFC5ACEC9BF6BDF8CECDAAECDF03043Q00A4D889BB026Q003940030C3Q007451042D2EE3156C5711252203073Q0072383E6549478D026Q00374003043Q00FAC5E35903043Q003CB4A48E026Q00354003183Q006220562B654DFB44214F2C6557EB16274A2C215FEC532C1E03073Q009836483F58453E026Q00334003063Q0029E1B1C704EB03043Q00AE678EC5026Q00314003363Q00F8222581A71CBCCF2B34C0A011F988222194B10AE888382592A710F3C66E2692BB14BCDC2625C09010EFCB213284F40AF9DA382592FA03073Q009CA84E40E0D479026Q00304003073Q00E45B7E00BC10D303063Q007EA7341074D9026Q002E40030F3Q003206BD2A2Q13F9190207AC221513BD03043Q004B6776D9026Q002C4003053Q00BFF92651FD03063Q00C7EB90523D98026Q00264003083Q0095E826C71AAF30CC03083Q00A7D6894AAB78CE53026Q00244003093Q002FC251617B37D4D22503083Q00876CAE3E121E1793026Q00224003043Q0095D84F5803053Q007EDBB9223D026Q001C4003283Q000ACD25982BCE2D9A2D8122873D813F9D39D1239A3DC428C669E223983081218927D42D8425D876C803043Q00E849A14C026Q00184003303Q00E23231EFCAAF8B3F28F6D7AFCF7D67D6DFB9DF3967EFCAEAC23267FFD1BFD97C25F4D1BDD83935A6CAA58B3628EFD0E403063Q00CAAB5C4786BE026Q00144003083Q0021BB873BDB03B98003053Q00B962DAEB57026Q00104003133Q009FCCC713420FB5D0D405102FFCEAD91C0B3FB903063Q004BDCA3B76A62026Q00084003043Q000B484F0503053Q003545292260028Q00030C3Q0043726561746542752Q746F6E026Q00F03F030F3Q00437265617465506172616772617068027Q004003093Q00437265617465546162022Q00A0E9AAB3F041030D3Q0043726561746553656374696F6E030C3Q0043726561746557696E646F7703133Q00E29AA020536372697074204F7574646174656401002Q0103253Q00682Q7470733A2Q2F646973636F72642E636F6D2F696E766974652F46764D655074794A7271030A3Q006C6F6164737472696E6703043Q0067616D6503073Q00482Q7470476574031C3Q00682Q7470733A2Q2F7369726975732E6D656E752F7261796669656C64002C013Q00047Q00120C000100013Q00202800010001000200120C000200013Q00202800020002000300120C000300013Q00202800030003000400120C000400053Q0006450004000B000100010004293Q000B000100120C000400063Q00202800050004000700120C000600083Q00202800060006000900120C000700083Q00202800070007000A00064700083Q000100062Q003C3Q00074Q003C3Q00014Q003C3Q00054Q003C3Q00024Q003C3Q00034Q003C3Q00064Q0038000900083Q001254000A000C3Q001254000B000D4Q001B0009000B00020010053Q000B00092Q0038000900083Q001254000A000F3Q001254000B00104Q001B0009000B00020010053Q000E00092Q0038000900083Q001254000A00123Q001254000B00134Q001B0009000B00020010053Q001100092Q0038000900083Q001254000A00153Q001254000B00164Q001B0009000B00020010053Q001400092Q0038000900083Q001254000A00183Q001254000B00194Q001B0009000B00020010053Q001700092Q0038000900083Q001254000A001B3Q001254000B001C4Q001B0009000B00020010053Q001A00092Q0038000900083Q001254000A001E3Q001254000B001F4Q001B0009000B00020010053Q001D00092Q0038000900083Q001254000A00213Q001254000B00224Q001B0009000B00020010053Q002000092Q0038000900083Q001254000A00243Q001254000B00254Q001B0009000B00020010053Q002300092Q0038000900083Q001254000A00273Q001254000B00284Q001B0009000B00020010053Q002600092Q0038000900083Q001254000A002A3Q001254000B002B4Q001B0009000B00020010053Q002900092Q0038000900083Q001254000A002D3Q001254000B002E4Q001B0009000B00020010053Q002C00092Q0038000900083Q001254000A00303Q001254000B00314Q001B0009000B00020010053Q002F00092Q0038000900083Q001254000A00333Q001254000B00344Q001B0009000B00020010053Q003200092Q0038000900083Q001254000A00363Q001254000B00374Q001B0009000B00020010053Q003500092Q0038000900083Q001254000A00393Q001254000B003A4Q001B0009000B00020010053Q003800092Q0038000900083Q001254000A003C3Q001254000B003D4Q001B0009000B00020010053Q003B00092Q0038000900083Q001254000A003F3Q001254000B00404Q001B0009000B00020010053Q003E00092Q0038000900083Q001254000A00423Q001254000B00434Q001B0009000B00020010053Q004100092Q0038000900083Q001254000A00453Q001254000B00464Q001B0009000B00020010053Q004400092Q0038000900083Q001254000A00483Q001254000B00494Q001B0009000B00020010053Q004700092Q0038000900083Q001254000A004B3Q001254000B004C4Q001B0009000B00020010053Q004A00092Q0038000900083Q001254000A004E3Q001254000B004F4Q001B0009000B00020010053Q004D00092Q0038000900083Q001254000A00513Q001254000B00524Q001B0009000B00020010053Q005000092Q0038000900083Q001254000A00543Q001254000B00554Q001B0009000B00020010053Q005300092Q0038000900083Q001254000A00573Q001254000B00584Q001B0009000B00020010053Q005600092Q0038000900083Q001254000A005A3Q001254000B005B4Q001B0009000B00020010053Q005900092Q0038000900083Q001254000A005D3Q001254000B005E4Q001B0009000B00020010053Q005C00092Q0038000900083Q001254000A00603Q001254000B00614Q001B0009000B00020010053Q005F00092Q0038000900083Q001254000A00633Q001254000B00644Q001B0009000B00020010053Q006200092Q0038000900083Q001254000A00663Q001254000B00674Q001B0009000B00020010053Q006500092Q0038000900083Q001254000A00693Q001254000B006A4Q001B0009000B00020010053Q006800090012540009006B4Q004B000A000F3Q00260F000900D4000100680004293Q00D4000100020A000F00013Q0020490010000D006C2Q000400123Q000200202800133Q006800202800143Q00652Q004A00120013001400202800133Q006200064700140002000100042Q003C3Q000F4Q003C3Q000A4Q003C3Q000E4Q003C8Q004A0012001300142Q00340010001200010020490010000D006C2Q000400123Q000200202800133Q005900202800143Q00562Q004A00120013001400202800133Q005300064700140003000100012Q003C3Q000B4Q004A0012001300142Q00340010001200010004293Q002A2Q0100260F000900F00001006D0004293Q00F000010012540010006B3Q00260F001000E40001006D0004293Q00E400010020490011000D006E2Q000400133Q000200202800143Q005000202800153Q004D2Q004A00130014001500202800143Q004A00202800153Q00472Q004A0013001400152Q00340011001300010012540009006F3Q0004293Q00F0000100260F001000D70001006B0004293Q00D700010020490011000C007000202800133Q0044001254001400714Q001B0011001400022Q0038000D00113Q0020490011000D007200202800133Q00412Q00340011001300010012540010006D3Q0004293Q00D7000100260F000900212Q01006B0004293Q00212Q010012540010006B3Q00260F001000142Q01006D0004293Q00142Q010020490011000B00732Q000400133Q000600202800143Q003E00205000130014007400202800143Q003B00202800153Q00382Q004A00130014001500202800143Q003500202800153Q00322Q004A00130014001500202800143Q002F2Q000400153Q000100202800163Q002C0020500015001600752Q004A00130014001500202800143Q00292Q000400153Q000300202800163Q002600205000150016007600202800163Q002300202800173Q00202Q004A00150016001700202800163Q001D0020500015001600752Q004A00130014001500202800143Q001A0020500013001400752Q001B0011001300022Q0038000C00113Q0012540009006D3Q0004293Q00212Q0100260F001000F30001006B0004293Q00F30001001254000A00773Q00120C001100783Q00120C001200793Q00204900120012007A0012540014007B4Q0003001200144Q004D00113Q00022Q00240011000100022Q0038000B00113Q0012540010006D3Q0004293Q00F3000100260F000900B90001006F0004293Q00B900012Q004B000E000E3Q000647000E0004000100022Q003C3Q000B4Q003C8Q004B000F000F3Q001254000900683Q0004293Q00B900012Q000B00096Q00023Q00013Q00053Q00023Q00026Q00F03F026Q00704002264Q000400025Q001254000300014Q002700045Q001254000500013Q0004180003002100012Q001900076Q0038000800024Q0019000900014Q0019000A00024Q0019000B00034Q0019000C00044Q0038000D6Q0038000E00063Q00201C000F000600012Q0003000C000F4Q004D000B3Q00022Q0019000C00034Q0019000D00044Q0038000E00014Q0027000F00014Q0040000F0006000F00103A000F0001000F2Q0027001000014Q004000100006001000103A00100001001000201C0010001000012Q0003000D00104Q0022000C6Q004D000A3Q000200201A000A000A00022Q001D0009000A4Q002300073Q00010004120003000500012Q0019000300054Q0038000400024Q002B000300044Q001700036Q00023Q00017Q00033Q00028Q00026Q00F03F03053Q007063612Q6C011D3Q001254000100014Q004B000200023Q001254000300013Q00260F00030003000100010004293Q00030001000E5500020008000100010004293Q000800012Q004F000200023Q00260F00010002000100010004293Q00020001001254000400013Q000E550002000F000100040004293Q000F0001001254000100023Q0004293Q0002000100260F0004000B000100010004293Q000B00012Q003300025Q00120C000500033Q00064700063Q000100022Q003C8Q003C3Q00024Q0014000500020001001254000400023Q0004293Q000B00010004293Q000200010004293Q000300010004293Q000200012Q00023Q00013Q00013Q00053Q00030C3Q00736574636C6970626F617264028Q002Q033Q0073796E030F3Q0077726974655F636C6970626F617264030B3Q00746F636C6970626F61726400353Q00120C3Q00013Q00064Q000E00013Q0004293Q000E00010012543Q00023Q00260F3Q0004000100020004293Q0004000100120C000100014Q001900026Q00140001000200012Q0033000100014Q002C000100013Q0004293Q003400010004293Q000400010004293Q0034000100120C3Q00033Q00064Q002100013Q0004293Q0021000100120C3Q00033Q0020285Q000400064Q002100013Q0004293Q002100010012543Q00023Q00260F3Q0016000100020004293Q0016000100120C000100033Q0020280001000100042Q001900026Q00140001000200012Q0033000100014Q002C000100013Q0004293Q003400010004293Q001600010004293Q0034000100120C3Q00053Q00064Q003400013Q0004293Q003400010012543Q00024Q004B000100013Q00260F3Q0026000100020004293Q00260001001254000100023Q00260F00010029000100020004293Q0029000100120C000200054Q001900036Q00140002000200012Q0033000200014Q002C000200013Q0004293Q003400010004293Q002900010004293Q003400010004293Q002600012Q00023Q00017Q00043Q00026Q001840028Q00026Q001C40030C3Q00736574636C6970626F61726400194Q00198Q0019000100014Q00253Q0002000200064Q000A00013Q0004293Q000A00012Q00193Q00024Q0019000100033Q0020280001000100012Q00143Q000200010004293Q001800010012543Q00023Q00260F3Q000B000100020004293Q000B00012Q0019000100024Q0019000200033Q0020280002000200032Q0019000300014Q00010002000200032Q001400010002000100120C000100044Q0019000200014Q00140001000200010004293Q001800010004293Q000B00012Q00023Q00017Q00013Q0003073Q0044657374726F7900044Q00197Q0020495Q00012Q00143Q000200012Q00023Q00017Q00083Q0003063Q004E6F74696679025Q00804440026Q004540025Q00804540026Q004640026Q000840025Q00804640022Q00A0E9AAB3F04101134Q001900015Q0020490001000100012Q000400033Q00042Q0019000400013Q0020280004000400022Q0019000500013Q0020280005000500032Q004A0003000400052Q0019000400013Q0020280004000400042Q004A000300044Q0019000400013Q0020280004000400050020500003000400062Q0019000400013Q0020280004000400070020500003000400082Q00340001000300012Q00023Q00017Q00",v9(),...);
+-- Get the game name dynamically
+local MarketplaceService = game:GetService("MarketplaceService")
+local gameName = MarketplaceService:GetProductInfo(game.PlaceId).Name
+
+-- Create Window with dynamic game name
+local Window = WindUI:CreateWindow({
+    Title = "VEX - " .. gameName,
+    Author = "Premium Build",
+    Icon = "rbxassetid://86958834463274",
+    Folder = "Vex_Fisch",
+    Size = UDim2.fromOffset(500, 350),
+    Transparent = false,
+    Theme = "Dark",
+    HideSearchBar = false,
+    ScrollBarEnabled = true,
+    SideBarWidth = 200,
+    Resizable = true,
+    OpenButton = {
+        Enabled = false,
+    }
+})
+
+Window:SetToggleKey(Enum.KeyCode.K)
+
+task.delay(13, function()
+    WindUI:Notify({
+        Title = "VEX",
+        Content = "Found a bug or have suggestions? Report them on our Discord!",
+        Icon = "message-square",
+        Duration = 6
+    })
+end)
+
+-- Tabs
+local Tabs = {
+    Home = Window:Tab({ Title = "Discord", Icon = "users"  }),
+    Farm = Window:Tab({ Title = "Farm", Icon = "fish"  }),
+    Shop = Window:Tab({ Title = "Shop", Icon = "shopping-cart"  }),
+    Teleport = Window:Tab({ Title = "Teleport", Icon = "map-pin"  }),
+    Misc = Window:Tab({ Title = "Misc", Icon = "wand"  }),
+}
+
+Tabs.Home:Section({ Title = "Community" })
+
+Tabs.Home:Paragraph({
+    Title = "Welcome to VEX Scripts!",
+    Desc = "Get the latest scripts, updates, announcements, and support by joining our Discord community.",
+    Image = "rbxassetid://82233980503615",
+    ImageSize = 60,
+    Color = "Red",
+    Buttons = {
+        {
+            Title = "Join Discord",
+            Icon = "geist:logo-discord",
+            Callback = function()
+                if setclipboard then
+                    setclipboard("https://discord.gg/FvMePtyJrq")
+
+                    Window:Dialog({
+                        Title = "Discord Link Copied",
+                        Icon = "geist:logo-discord",
+                        Content = "The Discord invite link has been copied to your clipboard.",
+                        Buttons = {
+                            {
+                                Title = "OK",
+                                Icon = "check"
+                            }
+                        }
+                    })
+                else
+                    WindUI:Notify({
+                        Title = "Clipboard Not Supported",
+                        Content = "Your executor doesn't support copying to the clipboard.",
+                        Duration = 4,
+                        Icon = "alert-triangle",
+                    })
+                end
+            end
+        }
+    }
+})
+
+Tabs.Home:Space()
+
+Tabs.Home:Paragraph({
+    Title = "Keybind: K",
+    Desc = "Press K to open or close the menu.",
+    Color = "Green",
+})
+
+Tabs.Home:Space()
+
+Tabs.Home:Paragraph({
+    Title = "Tired of Key Systems?",
+    Desc = "Tired of getting a new key every 24 hours? Buy a key or boost our Discord server to skip the hassle!",
+    Color = "Orange",
+})
+
+Tabs.Farm:Section({ Title = "Fishing" })
+
+-- Services
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local UserInputService = game:GetService("UserInputService")
+local VirtualInputManager = game:GetService("VirtualInputManager")
+local RunService = game:GetService("RunService")
+
+local function GetFishingTool()
+    local rodName
+    pcall(function()
+        rodName = ReplicatedStorage.playerstats[LocalPlayer.Name].Stats.rod.Value
+    end)
+
+    local char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+    local backpack = LocalPlayer:FindFirstChildOfClass("Backpack")
+
+    -- Check in Character (equipped)
+    for _, v in ipairs(char:GetChildren()) do
+        if rodName and v.Name == rodName then
+            return v
+        elseif v.Name:lower():find("rod") or v.Name:lower():find("fish") then
+            return v
+        end
+    end
+
+    -- Check in Backpack (not equipped)
+    if backpack then
+        for _, v in ipairs(backpack:GetChildren()) do
+            if rodName and v.Name == rodName then
+                return v
+            elseif v.Name:lower():find("rod") or v.Name:lower():find("fish") then
+                return v
+            end
+        end
+    end
+
+    -- Wait briefly for replication
+    local startTime = tick()
+    while tick() - startTime < 2 do
+        task.wait(0.1)
+        if backpack then
+            for _, v in ipairs(backpack:GetChildren()) do
+                if rodName and v.Name == rodName then
+                    return v
+                elseif v.Name:lower():find("rod") or v.Name:lower():find("fish") then
+                    return v
+                end
+            end
+        end
+    end
+
+    return nil
+end
+
+-- Auto Equip Rod
+Tabs.Farm:Toggle({
+    Title = "Auto Equip Rod",
+    Desc = "Automatically equips the fishing rod from your inventory",
+    Value = false,
+    Callback = function(state)
+        if state then
+            getgenv().AutoEquipRod = true
+            task.spawn(function()
+                while getgenv().AutoEquipRod and task.wait(1) do
+                    local player = game.Players.LocalPlayer
+                    local backpack = player:WaitForChild("Backpack")
+
+                    local hasRod = false
+                    if player.Character then
+                        for _, tool in ipairs(player.Character:GetChildren()) do
+                            if tool:IsA("Tool") and (
+                                string.find(tool.Name:lower(), "rod") or 
+                                string.find(tool.Name:lower(), "rend") or
+                                string.find(tool.Name:lower(), "ravager") or
+                                string.find(tool.Name:lower(), "yarncaster") or
+                                string.find(tool.Name:lower(), "boom") or
+                                string.find(tool.Name:lower(), "oath") or
+                                string.find(tool.Name:lower(), "staff") or
+                                string.find(tool.Name:lower(), "duskwire") or
+                                string.find(tool.Name:lower(), "spiritbinder") or
+                                string.find(tool.Name:lower(), "pitchfork") or
+                                string.find(tool.Name:lower(), "mossripper") or
+                                string.find(tool.Name:lower(), "onirifalx") or
+                                string.find(tool.Name:lower(), "dreambreaker") or
+                                string.find(tool.Name:lower(), "blazer") or
+                                string.find(tool.Name:lower(), "fang") or
+                                string.find(tool.Name:lower(), "fallen") or
+                                string.find(tool.Name:lower(), "wingripper") or
+                                string.find(tool.Name:lower(), "serenade") or
+                                string.find(tool.Name:lower(), "cinderstring") or
+                                string.find(tool.Name:lower(), "eardrum") or
+                                string.find(tool.Name:lower(), "chrysalis") or
+                                string.find(tool.Name:lower(), "axe") or
+                                string.find(tool.Name:lower(), "blade") or
+                                string.find(tool.Name:lower(), "guitar") or
+                                string.find(tool.Name:lower(), "sword") or
+                                string.find(tool.Name:lower(), "spire") or
+                                string.find(tool.Name:lower(), "paintbrush") or
+                                string.find(tool.Name:lower(), "nilcaster") or
+                                string.find(tool.Name:lower(), "fish") or
+                                string.find(tool.Name:lower(), "smasher") or
+                                string.find(tool.Name:lower(), "caster") or
+                                string.find(tool.Name:lower(), "sovereign") or
+                                string.find(tool.Name:lower(), "elemental")
+                            ) then
+                                hasRod = true
+                                break
+                            end
+                        end
+                    end
+
+                    if not hasRod then
+                        for _, tool in ipairs(backpack:GetChildren()) do
+                            if tool:IsA("Tool") and (
+                                string.find(tool.Name:lower(), "rod") or 
+                                string.find(tool.Name:lower(), "rend") or
+                                string.find(tool.Name:lower(), "ravager") or
+                                string.find(tool.Name:lower(), "yarncaster") or
+                                string.find(tool.Name:lower(), "boom") or
+                                string.find(tool.Name:lower(), "oath") or
+                                string.find(tool.Name:lower(), "staff") or
+                                string.find(tool.Name:lower(), "duskwire") or
+                                string.find(tool.Name:lower(), "spiritbinder") or
+                                string.find(tool.Name:lower(), "pitchfork") or
+                                string.find(tool.Name:lower(), "mossripper") or
+                                string.find(tool.Name:lower(), "onirifalx") or
+                                string.find(tool.Name:lower(), "dreambreaker") or
+                                string.find(tool.Name:lower(), "blazer") or
+                                string.find(tool.Name:lower(), "fang") or
+                                string.find(tool.Name:lower(), "fallen") or
+                                string.find(tool.Name:lower(), "wingripper") or
+                                string.find(tool.Name:lower(), "serenade") or
+                                string.find(tool.Name:lower(), "cinderstring") or
+                                string.find(tool.Name:lower(), "eardrum") or
+                                string.find(tool.Name:lower(), "chrysalis") or
+                                string.find(tool.Name:lower(), "axe") or
+                                string.find(tool.Name:lower(), "blade") or
+                                string.find(tool.Name:lower(), "guitar") or
+                                string.find(tool.Name:lower(), "sword") or
+                                string.find(tool.Name:lower(), "spire") or
+                                string.find(tool.Name:lower(), "paintbrush") or
+                                string.find(tool.Name:lower(), "nilcaster") or
+                                string.find(tool.Name:lower(), "fish") or
+                                string.find(tool.Name:lower(), "smasher") or
+                                string.find(tool.Name:lower(), "caster") or
+                                string.find(tool.Name:lower(), "sovereign") or
+                                string.find(tool.Name:lower(), "elemental")
+                            ) then
+                                player.Character.Humanoid:EquipTool(tool)
+                                break
+                            end
+                        end
+                    end
+                end
+            end)
+        else
+            getgenv().AutoEquipRod = false
+        end
+    end
+})
+
+-- Perfect Auto Cast Variables
+local AutoCastEnabled = false
+local CastPowerThreshold = 0.95
+local CastLoop = nil
+local IsHoldingCast = false
+
+-- Continuous holding variables
+local LastHoldTime = 0
+local HoldInterval = 1
+local InFishingGame = false
+
+-- Function to check if UI is active
+local function IsFishingGameActive()
+    local playerGui = game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+    if not playerGui then return false end
+    
+    if playerGui:FindFirstChild("shakeui") then
+        return true
+    end
+    
+    if playerGui:FindFirstChild("reel") then
+        return true
+    end
+    
+    return false
+end
+
+-- Function to check if rod is equipped
+local function HasRodEquipped()
+    local character = LocalPlayer.Character
+    if not character then return false end
+    
+    for _, tool in ipairs(character:GetChildren()) do
+        if tool:IsA("Tool") and (
+            string.find(tool.Name:lower(), "rod") or 
+            string.find(tool.Name:lower(), "rend") or
+            string.find(tool.Name:lower(), "ravager") or
+            string.find(tool.Name:lower(), "yarncaster") or
+            string.find(tool.Name:lower(), "boom") or
+            string.find(tool.Name:lower(), "oath") or
+            string.find(tool.Name:lower(), "staff") or
+            string.find(tool.Name:lower(), "duskwire") or
+            string.find(tool.Name:lower(), "spiritbinder") or
+            string.find(tool.Name:lower(), "pitchfork") or
+            string.find(tool.Name:lower(), "mossripper") or
+            string.find(tool.Name:lower(), "onirifalx") or
+            string.find(tool.Name:lower(), "dreambreaker") or
+            string.find(tool.Name:lower(), "blazer") or
+            string.find(tool.Name:lower(), "fang") or
+            string.find(tool.Name:lower(), "fallen") or
+            string.find(tool.Name:lower(), "wingripper") or
+            string.find(tool.Name:lower(), "serenade") or
+            string.find(tool.Name:lower(), "cinderstring") or
+            string.find(tool.Name:lower(), "eardrum") or
+            string.find(tool.Name:lower(), "chrysalis") or
+            string.find(tool.Name:lower(), "axe") or
+            string.find(tool.Name:lower(), "blade") or
+            string.find(tool.Name:lower(), "guitar") or
+            string.find(tool.Name:lower(), "sword") or
+            string.find(tool.Name:lower(), "spire") or
+            string.find(tool.Name:lower(), "paintbrush") or
+            string.find(tool.Name:lower(), "nilcaster") or
+            string.find(tool.Name:lower(), "fish") or
+            string.find(tool.Name:lower(), "smasher") or
+            string.find(tool.Name:lower(), "caster") or
+            string.find(tool.Name:lower(), "sovereign") or
+            string.find(tool.Name:lower(), "elemental")
+        ) then
+            return true
+        end
+    end
+    return false
+end
+
+-- Function to find the power bar
+local function GetPowerBar()
+    local character = LocalPlayer.Character
+    if not character then return nil end
+    
+    local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+    if not humanoidRootPart then return nil end
+    
+    local power = humanoidRootPart:FindFirstChild("power")
+    if not power then return nil end
+    
+    local powerbar = power:FindFirstChild("powerbar")
+    if not powerbar then return nil end
+    
+    local bar = powerbar:FindFirstChild("bar")
+    return bar
+end
+
+-- Function to get current cast power
+local function GetCastPower()
+    local bar = GetPowerBar()
+    if bar and bar:IsA("Frame") then
+        return bar.Size.Y.Scale
+    end
+    return 0
+end
+
+-- Function to simulate touch hold
+local function StartCastHold()
+    if IsHoldingCast then return end
+    
+    local screenSize = workspace.CurrentCamera.ViewportSize
+    local holdX = screenSize.X - 100
+    local holdY = screenSize.Y - 100
+    
+    pcall(function()
+        VirtualInputManager:SendMouseButtonEvent(
+            holdX,
+            holdY,
+            0,
+            true,
+            game,
+            1
+        )
+        IsHoldingCast = true
+    end)
+end
+
+-- Function to simulate touch release
+local function ReleaseCast()
+    if not IsHoldingCast then return end
+    
+    local screenSize = workspace.CurrentCamera.ViewportSize
+    local screenCenterX = screenSize.X - 100
+    local screenCenterY = screenSize.Y - 100
+    
+    pcall(function()
+        VirtualInputManager:SendMouseButtonEvent(
+            screenCenterX,
+            screenCenterY,
+            0,
+            false,
+            game,
+            1
+        )
+        IsHoldingCast = false
+    end)
+end
+
+-- Main Auto Cast Loop
+local function StartAutoCast()
+    local HasCast = false
+    local CastCooldown = false
+    
+    CastLoop = RunService.Heartbeat:Connect(function()
+        if not AutoCastEnabled then return end
+        
+        if not HasRodEquipped() then
+            if IsHoldingCast then
+                ReleaseCast()
+            end
+            HasCast = false
+            CastCooldown = false
+            return
+        end
+        
+        InFishingGame = IsFishingGameActive()
+        
+        if InFishingGame then
+            if IsHoldingCast then
+                ReleaseCast()
+            end
+            return
+        end
+        
+        local CurrentPower = GetCastPower()
+        local CurrentTime = tick()
+        
+        if not IsHoldingCast and CurrentPower == 0 and not HasCast and not CastCooldown then
+            if CurrentTime - LastHoldTime >= HoldInterval then
+                StartCastHold()
+                LastHoldTime = CurrentTime
+            end
+        end
+        
+        if IsHoldingCast and CurrentPower > 0 then
+            if CurrentPower >= CastPowerThreshold and not HasCast then
+                ReleaseCast()
+                HasCast = true
+                CastCooldown = true
+                wait(3)
+                HasCast = false
+                CastCooldown = false
+            end
+        end
+        
+        if IsHoldingCast and CurrentPower == 0 and CurrentTime - LastHoldTime >= HoldInterval then
+            ReleaseCast()
+        end
+    end)
+end
+
+-- Stop Auto Cast
+local function StopAutoCast()
+    if CastLoop then
+        CastLoop:Disconnect()
+        CastLoop = nil
+    end
+    if IsHoldingCast then
+        ReleaseCast()
+    end
+    IsHoldingCast = false
+    InFishingGame = false
+end
+
+-- Perfect Auto Cast Toggle
+Tabs.Farm:Toggle({
+    Title = "Auto Perfect Cast",
+    Desc = "Automatically casts with perfect timing (Please make sure the rod is equipped before turning this ON)",
+    Value = false,
+    Callback = function(state)
+        AutoCastEnabled = state
+        
+        if AutoCastEnabled then
+            if HasRodEquipped() then
+                StartAutoCast()
+            else
+                AutoCastEnabled = false
+                WindUI:Notify({
+                    Title = "No Rod Equipped",
+                    Content = "Please equip a fishing rod first!",
+                    Duration = 3,
+                    Icon = "alert-triangle",
+                })
+            end
+        else
+            StopAutoCast()
+        end
+    end
+})
+
+local AutoShakeEnabled = false
+
+Tabs.Farm:Toggle({
+    Title = "Auto Shake",
+    Desc = "Automatically completes the shake minigame",
+    Value = false,
+    Callback = function(state)
+        AutoShakeEnabled = state
+    end
+})
+
+local function PerformShake()
+    local gui = LocalPlayer:WaitForChild("PlayerGui")
+    local shakeui = gui:FindFirstChild("shakeui")
+    if shakeui then
+        local safezone = shakeui:FindFirstChild("safezone")
+        if safezone then
+            local button = safezone:FindFirstChild("default")
+            if button and button:IsA("ImageButton") then
+                firesignal(button.Activated)
+            end
+        end
+    end
+end
+
+task.spawn(function()
+    while true do
+        task.wait(0.1)
+        if AutoShakeEnabled then
+            pcall(PerformShake)
+        end
+    end
+end)
+
+local AutoReelEnabled = false
+
+Tabs.Farm:Toggle({
+    Title = "Auto Perfect Reel",
+    Desc = "Automatically reels in fish with perfect catch timing",
+    Value = false,
+    Callback = function(state)
+        AutoReelEnabled = state
+    end
+})
+
+local ReelController
+
+local function PerformReel()
+    if not ReelController then
+        ReelController = require(game:GetService("ReplicatedStorage")
+            :WaitForChild("client")
+            :WaitForChild("legacyControllers")
+            :WaitForChild("ReelController"))
+    end
+    
+    local activeReel = ReelController.ActiveReel
+    if not activeReel then return end
+    if not activeReel.active then return end
+    
+    local isPinionsAria = activeReel.rodName == "Pinion's Aria" or activeReel.rodName == "Pinion's Aria (Restricted)"
+    
+    if isPinionsAria then
+        activeReel.barSize = 1
+        activeReel.minBarSize = 0.1
+        activeReel.barPosition = 0.5
+        activeReel.onbar = true
+    else
+        activeReel.barSize = 1
+        activeReel.barPosition = activeReel.fishPosition
+    end
+end
+
+task.spawn(function()
+    while task.wait() do
+        if AutoReelEnabled then
+            pcall(PerformReel)
+        end
+    end
+end)
+
+Tabs.Farm:Section({ Title = "Equipment Rod" })
+
+local rodList = {
+    "Flimsy Rod","Fischer's Rod","Training Rod","Plastic Rod","Carbon Rod","Fast Rod","Lucky Rod","Long Rod","Stone Rod",
+    "Rose Rend","Scarlet Ravager","Experimental Rod","Magma Rod","Fungal Rod","Steady Rod","Fortune Rod","Rapid Rod","Magnet Rod","Nocturnal Rod",
+    "Precision Rod","Wildflower Rod","Reinforced Rod","Arctic Rod","Avalanche Rod","Phoenix Rod","Pinion's Aria","Scurvy Rod","Midas Rod","Crystalized Rod","Depthseeker Rod",
+    "Aurora Rod","Mythical Rod","Kings Rod","Ice Warpers Rod","Brick Rod","Champions Rod","Friendly Rod","Carrot Rod","Wisdom Rod","Trident Rod",
+    "Summit Rod","Resourceful Rod","Volcanic Rod","Voyager Rod","Riptide Rod","Seasons Rod","Rainbow Cluster Rod","Great Dreamer Rod","Sunken Rod","Auric Rod",
+    "Rod Of The Depths","Rod Of The Exalted One","Destiny Rod","Abyssal Specter Rod","The Lost Rod","The Boom Ball","Frostbane Rod","Scarlet Spincaster Rod","Heaven's Rod","No-Life Rod",
+    "Zeus Rod","Tempest Rod","Kraken Rod","Poseidon Rod","Leviathan's Fang Rod","Challenger's Rod","Great Rod of Oscar","Luminescent Oath","Celestial Rod","Rod Of The Eternal King",
+    "Rod Of The Forgotten Fang","Duskwire","Evil Pitchfork","Cerulean Fang Rod","Wicked Fang Rod","Ethereal Prism Rod","Rod Of The Zenith","Seraphic Rod","Spiritbinder","Onirifalx",
+    "Ruinous Oath","Tryhard Rod","Haunted Rod","Relic Rod","Antler Rod","North-Star Rod","Candy Cane Rod","Krampus's Rod","Frost Warden Rod","Fischmas Rod",
+    "Frostfire Rod","Firework Rod","Shamrock Rod","Egg Rod","Brick Built Rod","Superstar Rod","Mission Specialist's Rod","Paleontologist's Rod","Fixer's Rod","Smurf Rod",
+    "Popsicle Rod","Tidal Wave Rod","Paper Fan Rod","Rod of the Cosmos","Buddy Bond Rod","Astral Rod","Event Horizon Rod","Rod Of Time","Patriot Rod","Fang of the Eclipse",
+    "Astralhook Rod","Fallen Snowblade","Wingripper","Sovereign Doombringer","Clickbait Caster","View Smasher","Fish Photographer","Paintbrush","nilCaster","Pen Rod"
+}
+
+local selectedRod = ""
+
+Tabs.Farm:Dropdown({ 
+    Title = "Select Rod", 
+    Values = rodList, 
+    SearchBarEnabled = true,
+    Value = "",
+    Callback = function(option) 
+        selectedRod = option
+        WindUI:Notify({
+            Title = "Rod Selected",
+            Content = "You selected: " .. option,
+            Duration = 4,
+            Icon = "settings",
+        })
+    end
+})
+
+Tabs.Farm:Button({
+    Title = "Equip Selected Rod",
+    Callback = function()
+        if selectedRod ~= "" then
+            local args = { selectedRod }
+            game:GetService("ReplicatedStorage"):WaitForChild("packages"):WaitForChild("Net"):WaitForChild("RE/Rod/Equip"):FireServer(unpack(args))
+
+            WindUI:Notify({
+                Title = "Rod Equipped",
+                Content = "Equipped: " .. selectedRod,
+                Duration = 5,
+                Icon = "settings",
+            })
+        else
+            WindUI:Notify({
+                Title = "No Rod Selected",
+                Content = "Please select a rod first!",
+                Duration = 5,
+                Icon = "alert-triangle",
+            })
+        end
+    end
+})
+
+Tabs.Farm:Section({ Title = "Equipment Bait" })
+
+local baitList = {
+    "Bagel","Flakes","Gale Grub","Garbage","Insect","Lushrooms","Worm","Maggot","Shrimp","Coral","Ember Berries",
+    "Magnet","Minnow","Seaweed","Squid","Coal","Crystal Bananas","Lagoon Leech","Rapid Catcher","Super Flakes","Deep Coral",
+    "Fish Head","Instant Catcher","Mist Worms","Night Shrimp","Truffle Worm","Weird Algae","Whale Bait","Golden Shrimp Bait","Sapphire Krill",
+    "Shark Head","Luminous Larva","Kraken Tentacle","Golden Tentacle","Hangman's Hook","Colossal Ink Bait","Hourglass Bait","Snare","Moonhaze",
+    "Phantom Leech","Glass Beetle","Neuro Slug","Toxic Jelly Core","Nightmare Larva","Golden Worm","Peppermint Worm","Holly Berry","Stud Bait",
+    "Aurora Bait","Chocolate Fish","Lucky"
+}
+
+local selectedBait = baitList[1]
+
+Tabs.Farm:Dropdown({
+    Title = "Select Bait",
+    Values = baitList,
+    SearchBarEnabled = true,
+    Value = selectedBait,
+    Callback = function(option)
+        selectedBait = option
+    end
+})
+
+Tabs.Farm:Button({
+    Title = "Equip Bait",
+    Callback = function()
+        local args = { selectedBait }
+        game:GetService("ReplicatedStorage")
+            :WaitForChild("packages")
+            :WaitForChild("Net")
+            :WaitForChild("RE/Bait/Equip")
+            :FireServer(unpack(args))
+    end
+})
+
+Tabs.Farm:Section({ Title = "Equipment Bobber" })
+
+local bobberList = {
+    "Frozen","Anchor","Cliff Peak","Coral Reef","Fake Pufferfish","Frozen Rubber Ducky","Infested","Mini Terrapin","Mushroom","Pirate Wheel",
+    "Skeleton","Ancient Book","Baby Anglerfish","Blue Moon","Chilled Spikes","Cryogenic Icicle","Frigid Crystal","Lava","Lava Spout","Quiet Crystal",
+    "Rubber Ducky","Sun","Tornado","Treasure Chest","Vertigo Rock","Bloxy Cola","Amber","Atlantis Guardian","Brine","Carrot Friend","Crystal Cluster",
+    "Harpoon","Nautilis Shell","Aurora","Ghostly Conch","Prismatic Gem","Founders Rainbow","Tryhard Bobber","Dusk Bobber","Spirit Bobber","Stock",
+    "Gem","Compass","Gold Coin","Whaley","Meteor Stone","Drifter's Tale","Sunken Ship","The Moby Bobber","Bloop Bobber","Lobster Pal","Fishing Net",
+    "Azure Flower","Cannon","Ember Cluster","Lighthouse","Lush Tree","Pine Tree","Spiritual Gem","Oceanic Tunnel","Treasure Whale","Cursed Dreamer",
+    "Skull","Crystallized Ball","Party Popper","Sunken Relic","Carbon","Blue Wiggly Worm","Green Wiggly Worm","Purple Wiggly Worm","Leaf","Heart",
+    "Cat","Cube","Huge","Wireframe","Star","Translucent","Income","LED","Lightning","Evil Ducky","Cheezburger","Chocolate Milk","Bloxiade",
+    "Glowfish Bobber","Roslit Bay Bobber","Diamond","Shaped","Eye","Coal"
+}
+
+local selectedBobber = bobberList[1]
+
+Tabs.Farm:Dropdown({
+    Title = "Select Bobber",
+    Values = bobberList,
+    SearchBarEnabled = true,
+    Value = selectedBobber,
+    Callback = function(option)
+        selectedBobber = option
+    end
+})
+
+Tabs.Farm:Button({
+    Title = "Equip Bobber",
+    Callback = function()
+        local args = { selectedBobber }
+        game:GetService("ReplicatedStorage")
+            :WaitForChild("packages")
+            :WaitForChild("Net")
+            :WaitForChild("RE/Bobber/Equip")
+            :FireServer(unpack(args))
+    end
+})
+
+Tabs.Farm:Section({ Title = "Sell" })
+
+local AutoSellEnabled = false
+local SellWaitTime = 5
+
+Tabs.Farm:Slider({
+    Title = "Sell Delay",
+    Step = 1,
+    Value = {
+        Min = 1,
+        Max = 100,
+        Default = 5,
+    },
+    Callback = function(value)
+        SellWaitTime = value
+    end
+})
+
+Tabs.Farm:Toggle({
+    Title = "Enable Auto Sell",
+    Desc = "Automatically sells all fish",
+    Value = false,
+    Callback = function(state)
+        AutoSellEnabled = state
+    end
+})
+
+local Events = ReplicatedStorage:WaitForChild("events")
+local npcFolder = workspace:WaitForChild("world"):WaitForChild("npcs")
+
+local function FindMerchant()
+    local npc = nil
+    while not npc do
+        for _, v in ipairs(npcFolder:GetChildren()) do
+            if v:IsA("Model") and string.match(v.Name, "Merchant$") then
+                npc = v
+                break
+            end
+        end
+        if not npc then
+            npcFolder.ChildAdded:Wait()
+        end
+    end
+    return npc
+end
+
+task.spawn(function()
+    while task.wait() do
+        if AutoSellEnabled then
+            local npc = FindMerchant()
+            local idle = npc:FindFirstChild("description") and npc.description:FindFirstChild("idle")
+
+            if npc and idle then
+                local args = {
+                    {
+                        voice = 12,
+                        npc = npc,
+                        idle = idle
+                    }
+                }
+                Events:WaitForChild("SellAll"):InvokeServer(unpack(args))
+            end
+
+            task.wait(SellWaitTime)
+        end
+    end
+end)
+
+Tabs.Shop:Section({ Title = "Crate" })
+
+local chosenCrate = "Bait Crate"
+local crateCount = 5
+local AutoPurchase = false
+
+Tabs.Shop:Dropdown({ 
+    Title = "Select Crate", 
+    Values = { "Bait Crate", "Quality Bait Crate" }, 
+    Value = chosenCrate, 
+    Callback = function(option) 
+        chosenCrate = option
+    end
+})
+
+Tabs.Shop:Toggle({
+    Title = "Auto Buy Crate",
+    Desc = "Automatically purchases selected crates when you have enough currency",
+    Value = false,
+    Callback = function(state)
+        AutoPurchase = state
+    end
+})
+
+local purchaseEvent = ReplicatedStorage:WaitForChild("events"):WaitForChild("purchase")
+
+spawn(function()
+    while true do
+        wait(0.01)
+        if AutoPurchase then
+            local args = {
+                chosenCrate,
+                "Fish",
+                [4] = crateCount
+            }
+            purchaseEvent:FireServer(unpack(args))
+        end
+    end
+end)
+
+Tabs.Shop:Section({ Title = "Rods" })
+
+local premiumRodList = {
+    "Trident Rod",
+    "Destiny Rod", 
+    "Aurora Rod",
+    "Kraken Rod",
+    "Poseidon Rod"
+}
+
+local chosenPremiumRod = premiumRodList[1]
+
+Tabs.Shop:Dropdown({
+    Title = "Select Rod",
+    Values = premiumRodList,
+    SearchBarEnabled = true,
+    Value = chosenPremiumRod,
+    Callback = function(option)
+        chosenPremiumRod = option
+    end
+})
+
+Tabs.Shop:Button({
+    Title = "Purchase Selected Rod",
+    Callback = function()
+        if chosenPremiumRod ~= "" then
+            game:GetService("ReplicatedStorage"):WaitForChild("events"):WaitForChild("purchase"):FireServer(chosenPremiumRod, "Rod", 1)
+            
+            WindUI:Notify({
+                Title = "Rod Purchase",
+                Content = "Purchased: " .. chosenPremiumRod,
+                Duration = 5,
+                Icon = "shopping-bag"
+            })
+        else
+            WindUI:Notify({
+                Title = "Purchase Failed",
+                Content = "Please select a rod first!",
+                Duration = 5,
+                Icon = "alert-circle"
+            })
+        end
+    end
+})
+
+Tabs.Teleport:Section({ Title = "Islands" })
+
+local islandLocations = {
+    ["Maple Meadow"] = CFrame.new(556.990479, 140.778183, 3425.473633, 0.250827461, 0.000000094, -0.968031824, 0.000000006, 1.000000000, 0.000000098, 0.968031824, -0.000000030, 0.250827461),
+    ["Ancient Archives"] = CFrame.new(-3156.37451, -745.713989, 1683.13574, -0.860117316, 1.84150082e-08, -0.510096252, 2.10384705e-08, 1, 6.26265706e-10, 0.510096252, -1.01929825e-08, -0.860117316),
+    ["Ancient Isle"] = CFrame.new(6057.07422, 195.280151, 277.14859, 0.18684645, 2.1313635e-08, 0.982389152, -6.77808432e-08, 1, -8.78668072e-09, -0.982389152, -6.50338237e-08, 0.18684645),
+    ["Ancient Isle 1"] = CFrame.new(-3155.02222, -750.667847, 2193.13696, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    ["Ancient Isle 2"] = CFrame.new(5948.79053, 157.230042, 482.23584, 0.764405072, 0, 0.644736409, 0, 1, 0, -0.644736409, 0, 0.764405072),
+    ["Atlantis"] = CFrame.new(-4265.13086, -602.574585, 1830.80737, -0.998844504, 0, -0.0480674766, 0, 1, 0, 0.0480674766, 0, -0.998844504),
+    ["Blue Moon Pool"] = CFrame.new(2743.1582, 131.499985, 2514.72388, 0.249071687, 8.3022293e-08, 0.968485057, -6.24669099e-08, 1, -6.96588458e-08, -0.968485057, -3.1482192e-08, 0.249071687),
+    ["Carrot Garden"] = CFrame.new(3716.6062, -1130.4895, -1078.50793, 0.657635927, -0.000371464179, 0.753335834, -5.71158016e-05, 0.999999821, 0.000542952563, -0.753335953, -0.00040009254, 0.657635808),
+    ["Crystal Cove"] = CFrame.new(1350.14526, -604.872681, 2329.95679, -0.408572346, -2.40111309e-08, -0.912725925, 3.4419484e-08, 1, -4.17144292e-08, 0.912725925, -4.84586131e-08, -0.408572346),
+    ["Desolate Deep"] = CFrame.new(-1654.96729, -213.520996, -2845.95215, -1, 0, 0, 0, 1, 0, 0, 0, -1),
+    ["Forsaken Shores"] = CFrame.new(-2573.6189, 145.750015, 1587.65393, 0.356420547, -6.3444922e-08, -0.934325635, 3.09142578e-08, 1, -5.6111538e-08, 0.934325635, -8.88467877e-09, 0.356420547),
+    ["Grand Reef"] = CFrame.new(-3565.76709, 154.360611, 535.246521, -0.457844615, 0, -0.889032245, 0, 1, 0, 0.889032245, 0, -0.457844615),
+    ["Moosewood"] = CFrame.new(436.368713, 154, 247.310532, 0.12572813, 0, 0.992064714, 0, 1, 0, -0.992064714, 0, 0.12572813),
+    ["Mushgrove Swamp"] = CFrame.new(2662.08105, 397.321472, -728.827026, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    ["Northern Expedition"] = CFrame.new(19526.9629, 140.240601, 5292.56592, -0.457844615, 0, -0.889032245, 0, 1, 0, 0.889032245, 0, -0.457844615),
+    ["Podium 1"] = CFrame.new(-3463.94727, -2254.81885, 3832.91699, -0.431924105, 0, 0.901909947, 0, 1, 0, -0.901909947, 0, -0.431924105),
+    ["Podium 2"] = CFrame.new(-825.645203, -3269.98804, -709.761169, 0.781674981, 0, 0.623686016, 0, 1, 0, -0.623686016, 0, 0.781674981),
+    ["Podium 3"] = CFrame.new(-13488.2939, -11053.1875, 134.38797, -0.27474618, 0.0107955653, -0.96145618, -0.00500683859, 0.999907374, 0.0126580652, 0.961503744, 0.00829161145, -0.274666667),
+    ["Podium 4"] = CFrame.new(-4333.00537, -11185.5732, 3196.40845, 0, 0, -1, 0, 1, 0, 1, 0, 0),
+    ["Roslit Bay"] = CFrame.new(-1597.0321, 134.780853, 604.949524, 0.394952327, 8.52962927e-08, -0.918701589, -4.72752115e-10, 1, 9.26411516e-08, 0.918701589, -3.61545212e-08, 0.394952327),
+    ["Roslit Volcano"] = CFrame.new(-1888.52319, 163.847565, 329.238281, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    ["Snowcap Island"] = CFrame.new(2628.69263, 142.099411, 2510.4458, -0.159515828, 3.14032782e-08, 0.987195373, -1.86964317e-09, 1, -3.2127409e-08, -0.987195373, -6.96839075e-09, -0.159515828),
+    ["Statue of Sovereignty"] = CFrame.new(32.7750549, 144.493347, -1020.3197, -0.866953373, 2.6253506e-08, -0.498389244, 4.85347975e-08, 1, 3.1570807e-08, 0.498389244, -5.17150696e-08, -0.866953373),
+    ["Sunstone Island"] = CFrame.new(-1046.80713, 134.239044, -1142.7168, 0.129344821, 5.11642035e-08, -0.991599679, 3.86840648e-09, 1, 5.21022378e-08, 0.991599679, -1.05750653e-08, 0.129344821),
+    ["Terrapin Island"] = CFrame.new(-207.215851, 142.213226, 1953.05188, -0.414013892, -1.23624488e-07, 0.910270572, -8.38610177e-08, 1, 9.76668118e-08, -0.910270572, -3.59000545e-08, -0.414013892),
+    ["The Depths"] = CFrame.new(947.417114, -711.63031, 1259.66516, 0.259314388, -8.87096352e-09, 0.965792954, 2.04304911e-08, 1, 3.69959574e-09, -0.965792954, 1.87722655e-08, 0.259314388),
+    ["Vertigo"] = CFrame.new(-112.007278, -492.901093, 1040.32788, -1, 0, 0, 0, 1, 0, 0, 0, -1),
+    ["Volcanic Vents"] = CFrame.new(-3421.24292, -2261.84131, 3839.80054, -0.993602812, -8.73249064e-08, -0.11293108, -7.97883573e-08, 1, -7.1255561e-08, 0.11293108, -6.17891374e-08, -0.993602812),
+    ["Harvesters Spike"] = CFrame.new(-1254.800659, 137.689117, 1554.202148, -0.143004924, -0.000000042, -0.989721954, 0.000000099, 1.000000000, -0.000000057, 0.989721954, -0.000000106, -0.143004924),
+    ["Ghosts Tavern"] = CFrame.new(252.978027, 799.999939, -6865.581055, 0.999985278, -0.000000040, 0.005427738, 0.000000040, 1.000000000, -0.000000000, -0.005427738, 0.000000000, 0.999985278),
+    ["Bunker"] = CFrame.new(1792.076050, -327.827911, -2389.547119, 0.073551059, -0.000000001, -0.997291446, 0.000000003, 1.000000000, -0.000000001, 0.997291446, -0.000000003, 0.073551059),
+    ["Ancient Archives Entrance"] = CFrame.new(5948.790527, 154.938034, 482.235840, 0.764405012, 0.000000013, 0.644736350, -0.000000043, 1.000000000, 0.000000030, -0.644736350, -0.000000051, 0.764405012),
+    ["Crypt of The Green One"] = CFrame.new(1537.449951, -1692.600098, 6357.649414, -1.000000000, 0.000000090, -0.000000000, 0.000000090, 1.000000000, -0.000000001, 0.000000000, -0.000000001, -1.000000000),
+    ["Keepers Altar"] = CFrame.new(1296.320068, -805.292236, -298.938171, 0.073551059, -0.000000004, -0.997291446, 0.000000020, 1.000000000, -0.000000003, 0.997291446, -0.000000020, 0.073551059),
+    ["Crypt Exit"] = CFrame.new(129.482117, 150.190491, 2043.208496, -0.608793199, 0.000000047, -0.793329000, -0.000000041, 1.000000000, 0.000000091, 0.793329000, 0.000000088, -0.608793199),
+    ["Calm Zone Inkeeper"] = CFrame.new(-4255.905273, -11201.726562, 1776.008423, 0.000000000, -0.000000017, -1.000000000, 0.000000032, 1.000000000, -0.000000017, 1.000000000, -0.000000032, 0.000000000),
+    ["Upper Snowcap"] = CFrame.new(2938.805908, 280.783783, 2567.133789, 0.464833200, -0.000000013, 0.885398269, -0.000000006, 1.000000000, 0.000000018, -0.885398269, -0.000000013, 0.464833200),
+    ["Sovereignty Mines"] = CFrame.new(-22.086105, 136.751114, -1123.099243, -0.342042685, -0.000000133, -0.939684391, -0.000000059, 1.000000000, -0.000000120, 0.939684391, 0.000000015, -0.342042685),
+    ["Chess Puzzle"] = CFrame.new(-4312.790527, -11172.470703, 4102.433594, -1.000000000, 0.000000017, -0.000000000, 0.000000017, 1.000000000, -0.000000005, 0.000000000, -0.000000005, -1.000000000),
+    ["Boss Arena"] = CFrame.new(-4355.886230, -11092.483398, 7153.694824, 1.000000000, 0.000000083, 0.000000000, -0.000000083, 1.000000000, 0.000000027, -0.000000000, -0.000000027, 1.000000000),
+    ["Merlin"] = CFrame.new(-949.014587, 222.055450, -985.975403, -0.342042685, -0.000000011, -0.939684391, 0.000000021, 1.000000000, -0.000000019, 0.939684391, -0.000000027, -0.342042685),
+    ["The Depths-Mazeend"] = CFrame.new(1683.632690, -902.401917, 1440.547729, -1.000000000, -0.000000002, -0.000005927, -0.000000002, 1.000000000, 0.000000066, 0.000005927, 0.000000066, -1.000000000),
+    ["Trident(???)"] = CFrame.new(-1479.489868, -225.710632, -2391.393066, 0.044430722, -0.000000112, 0.999012470, 0.000000038, 1.000000000, 0.000000110, -0.999012470, 0.000000033, 0.044430722),
+    ["The Depths-Obby"] = CFrame.new(66.992706, -704.968567, 1230.847900, -1.000000000, 0.000000036, 0.000000000, 0.000000036, 1.000000000, 0.000000069, -0.000000000, 0.000000069, -1.000000000),
+    ["The Depths-Entrance"] = CFrame.new(11.462474, -706.123718, 1230.847900, -1.000000000, -0.000000057, 0.000128467, -0.000000057, 1.000000000, -0.000000013, -0.000128467, -0.000000013, -1.000000000),
+    ["The Arch"] = CFrame.new(998.966797, 131.320236, -1237.143433, 0.000000000, -0.000000053, -1.000000000, 0.000000023, 1.000000000, -0.000000053, 1.000000000, -0.000000023, 0.000000000),
+    ["Desolate Brine Pool"] = CFrame.new(-1794.105957, -142.849823, -3302.922852, -0.000051719, 0.000000000, 1.000000000, 0.000000069, 1.000000000, 0.000000000, -1.000000000, 0.000000069, -0.000051719),
+    ["Executive Headquarters"] = CFrame.new(-29.836761, -246.580002, 199.116150, 0.707134247, -0.000000000, -0.707079291, 0.000000068, 1.000000000, 0.000000068, 0.707079291, -0.000000096, 0.707134247),
+    ["Luminescent Cavern"] = CFrame.new(-1020.665466, -336.883606, -4059.331299, -0.548262477, -0.000000002, -0.836306334, 0.000000022, 1.000000000, -0.000000016, 0.836306334, -0.000000027, -0.548262477),
+    ["Sunken Depths"] = CFrame.new(-4615.348633, -596.753601, 1843.486694, -0.998814344, 0.000000000, -0.048681572, 0.000000000, 1.000000000, 0.000000001, 0.048681572, 0.000000001, -0.998814344),
+    ["Kraken Puzzle 1"] = CFrame.new(-4352.249023, -627.110046, 2703.387451, -0.998844087, -0.000000046, -0.048067458, -0.000000041, 1.000000000, -0.000000109, 0.048067458, -0.000000107, -0.998844087),
+    ["Kraken Puzzle 2"] = CFrame.new(-3806.049072, -566.771729, 1835.287354, -0.998844087, 0.000000041, -0.048067458, 0.000000036, 1.000000000, 0.000000095, 0.048067458, 0.000000093, -0.998844087),
+    ["Kraken Puzzle 3"] = CFrame.new(-4283.250000, -676.422913, 1112.411621, -0.999019563, -0.001362979, -0.044250399, -0.001221454, 0.999994040, -0.003225151, 0.044254530, -0.003167939, -0.999015272),
+    ["Kraken Puzzle 4"] = CFrame.new(-4957.249023, -583.894104, 1870.686157, -0.998852313, 0.000000007, -0.047896564, 0.000000002, 1.000000000, 0.000000101, 0.047896564, 0.000000101, -0.998852313),
+    ["Zeus Puzzle"] = CFrame.new(-4296.198242, -673.110046, 2353.879395, -0.998844087, -0.000000014, -0.048067458, -0.000000012, 1.000000000, -0.000000032, 0.048067458, -0.000000031, -0.998844087),
+    ["Ethereal Puzzle"] = CFrame.new(-4132.255859, -598.604858, 1826.293579, -0.998844087, 0.000000003, -0.048067458, 0.000000002, 1.000000000, 0.000000006, 0.048067458, 0.000000006, -0.998844087),
+    ["Camp 1"] = CFrame.new(20208.041016, 208.420105, 5278.675781, -0.457844615, 0.000000022, -0.889032245, -0.000000055, 1.000000000, 0.000000053, 0.889032245, 0.000000073, -0.457844615),
+    ["Camp 2"] = CFrame.new(19756.589844, 415.437073, 5406.699707, -0.457844615, 0.000000002, -0.889032245, -0.000000004, 1.000000000, 0.000000004, 0.889032245, 0.000000005, -0.457844615),
+    ["North Glider"] = CFrame.new(20249.199219, 756.525818, 5758.619141, -0.487352520, 0.000000025, -0.873205304, -0.000000007, 1.000000000, 0.000000033, 0.873205304, 0.000000022, -0.487352520),
+    ["Grand Reef"] = CFrame.new(-3565.767090, 150.437225, 535.246521, -0.457844615, -0.000000060, -0.889032245, 0.000000018, 1.000000000, -0.000000077, 0.889032245, -0.000000052, -0.457844615),
+    ["The Keeper's Secret"] = CFrame.new(2233.238525, -804.182312, 1021.373901, 0.573598862, -0.000000116, 0.819136322, 0.000000068, 1.000000000, 0.000000094, -0.819136322, 0.000000002, 0.573598862),
+    ["Ice Puzzle"] = CFrame.new(19232.732422, 395.872131, 6010.345703, -0.457844615, -0.000000002, -0.889032245, -0.000000003, 1.000000000, -0.000000000, 0.889032245, 0.000000003, -0.457844615),
+    ["Final Puzzle"] = CFrame.new(19963.972656, 1137.889404, 5401.835449, -0.457844615, -0.000000022, -0.889032245, -0.000000047, 1.000000000, -0.000000001, 0.889032245, 0.000000041, -0.457844615),
+    ["Lever Puzzle"] = CFrame.new(19955.671875, 586.853760, 5571.535645, -0.457844615, 0.000000017, -0.889032245, 0.000000035, 1.000000000, 0.000000001, 0.889032245, -0.000000031, -0.457844615),
+    ["Castaway Cliffs"] = CFrame.new(718.703430, 133.909897, -1734.642700, -0.780371308, -0.000000007, -0.625316441, -0.000000008, 1.000000000, -0.000000002, 0.625316441, 0.000000004, -0.780371308),
+    ["Cultist Lair"] = CFrame.new(4456.398438, -1997.000122, -4674.217773, 0.792126596, 0.000000006, 0.610356867, -0.000000003, 1.000000000, -0.000000005, -0.610356867, 0.000000002, 0.792126596),
+    ["Hall of Whispers"] = CFrame.new(4198.007812, -2234.817139, -4685.061523, -0.231265485, 0.000000015, -0.972890675, -0.000000026, 1.000000000, 0.000000021, 0.972890675, 0.000000030, -0.231265485),
+    ["Passage of Oaths"] = CFrame.new(4440.270996, -2482.583984, -4680.461914, -0.095389031, -0.000000034, 0.995440066, 0.000000008, 1.000000000, 0.000000035, -0.995440066, 0.000000011, -0.095389031),
+    ["The Sanctum"] = CFrame.new(4372.500977, -2710.136719, -4672.656250, 0.016560489, 0.000000076, -0.999862850, 0.000000040, 1.000000000, 0.000000077, 0.999862850, -0.000000041, 0.016560489)
+}
+
+local chosenLocation = nil
+
+local locationNames = {}
+for name, _ in pairs(islandLocations) do
+    table.insert(locationNames, name)
+end
+
+Tabs.Teleport:Dropdown({
+    Title = "Select Location",
+    Values = locationNames,
+    SearchBarEnabled = true,
+    Value = locationNames[1],
+    Callback = function(option)
+        chosenLocation = option
+    end
+})
+
+Tabs.Teleport:Button({
+    Title = "Teleport",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        if chosenLocation and islandLocations[chosenLocation] then
+            character.HumanoidRootPart.CFrame = islandLocations[chosenLocation]
+            WindUI:Notify({
+                Title = "Teleport",
+                Content = "Teleported to " .. chosenLocation,
+                Duration = 5,
+                Icon = "map-pin",
+            })
+        else
+            WindUI:Notify({
+                Title = "Teleport",
+                Content = "Please select a valid location!",
+                Duration = 5,
+                Icon = "map",
+            })
+        end
+    end
+})
+
+Tabs.Teleport:Section({ Title = "NPCs" })
+
+local npcLocations = {
+    ["Sunberry Maea"] = CFrame.new(624.626953, 136.256653, 3534.103027, 0.566757798, -0.000000086, -0.823884428, -0.000000021, 1.000000000, -0.000000119, 0.823884428, 0.000000085, 0.566757798),
+    ["Spirit Gatherer Sam"] = CFrame.new(534.821655, 135.600098, 3517.375244, -0.944637656, 0.000000057, 0.328115404, 0.000000031, 1.000000000, -0.000000084, -0.328115404, -0.000000070, -0.944637656),
+    ["Reef-Scout Ryan"] = CFrame.new(550.083618, 133.615952, 3375.449219, 0.819279909, -0.000000004, 0.573393762, -0.000000083, 1.000000000, 0.000000125, -0.573393762, -0.000000150, 0.819279909),
+    ["Mariner Mike"] = CFrame.new(594.883606, 134.298813, 3557.316162, -0.796417415, 0.000000016, 0.604747295, 0.000000011, 1.000000000, -0.000000013, -0.604747295, -0.000000003, -0.796417415),
+    ["Carver Caleb"] = CFrame.new(466.553986, 183.246628, 3701.368164, 0.630836964, -0.000000015, -0.775915444, 0.000000015, 1.000000000, -0.000000007, 0.775915444, -0.000000007, 0.630836964),
+    ["Chilly Hearth Hailey"] = CFrame.new(563.474304, 149.399551, 3647.327637, -0.566039443, -0.000000044, -0.824378133, -0.000000030, 1.000000000, -0.000000032, 0.824378133, 0.000000007, -0.566039443),
+    ["Cinderfeast Cooper"] = CFrame.new(439.713104, 134.787659, 3496.482666, 0.883431077, 0.000000010, -0.468561172, 0.000000018, 1.000000000, 0.000000055, 0.468561172, -0.000000057, 0.883431077),
+    ["Forager Frank"] = CFrame.new(514.544495, 137.994293, 3620.990723, 0.874767065, 0.000000082, -0.484543681, -0.000000061, 1.000000000, 0.000000060, 0.484543681, -0.000000023, 0.874767065),
+    ["Harvestman Hank"] = CFrame.new(447.565460, 135.546967, 3580.744873, -0.940191388, -0.000000049, 0.340646684, -0.000000057, 1.000000000, -0.000000013, -0.340646684, -0.000000032, -0.940191388),
+    ["Marsh-Feast Mason"] = CFrame.new(389.959961, 142.653137, 3667.681885, -0.632051528, 0.000000032, 0.774926364, -0.000000070, 1.000000000, -0.000000099, -0.774926364, -0.000000117, -0.632051528),
+    ["Reed-Roast Rachel"] = CFrame.new(474.494110, 137.866989, 3656.244141, -0.876380384, -0.000000004, 0.481619567, -0.000000049, 1.000000000, -0.000000082, -0.481619567, -0.000000096, -0.876380384),
+    ["Captain Harvestbeard"] = CFrame.new(530.360962, 134.275726, 3428.925537, -0.827520549, 0.000000005, 0.561435401, 0.000000001, 1.000000000, -0.000000007, -0.561435401, -0.000000005, -0.827520549),
+    ["Idle Fishing NPC Mosewood 1"] = CFrame.new(417.915466, 134.427521, 339.084656, -0.988472223, -0.000000002, -0.151402190, -0.000000002, 1.000000000, -0.000000002, 0.151402190, -0.000000002, -0.988472223),
+    ["Idle Fishing NPC Mosewood 2"] = CFrame.new(365.412689, 132.500015, 182.097214, 0.992112517, -0.000000009, -0.125350624, 0.000000009, 1.000000000, 0.000000006, 0.125350624, -0.000000007, 0.992112517),
+    ["Lucas"] = CFrame.new(449.359100, 181.999878, 180.672928, -0.050830383, -0.000000106, 0.998707294, 0.000000026, 1.000000000, 0.000000108, -0.998707294, 0.000000032, -0.050830383),
+    ["Marlon Friend"] = CFrame.new(405.189850, 134.579941, 248.221863, 0.744140267, -0.000000000, 0.668023407, 0.000000019, 1.000000000, -0.000000021, -0.668023407, 0.000000028, 0.744140267),
+    ["Pierre"] = CFrame.new(391.388550, 135.348373, 196.712387, -1.000000000, 0.000000000, -0.000000000, 0.000000000, 1.000000000, -0.000000060, 0.000000000, -0.000000060, -1.000000000),
+    ["Marc Merchant"] = CFrame.new(465.985138, 151.910294, 223.492966, -0.996255517, 0.000000010, -0.086457677, 0.000000001, 1.000000000, 0.000000096, 0.086457677, 0.000000096, -0.996255517),
+    ["Henry"] = CFrame.new(483.539307, 152.383041, 236.296143, -0.789363682, 0.000000000, 0.613925874, 0.000000000, 1.000000000, 0.000000000, -0.613925874, 0.000000000, -0.789363682),
+    ["Appraiser"] = CFrame.new(453.670868, 150.563278, 206.873245, 0.017903492, -0.000000001, 0.999839723, 0.000000009, 1.000000000, 0.000000001, -0.999839723, 0.000000009, 0.017903492),
+    ["Inn Keeper"] = CFrame.new(486.884247, 154.718292, 230.475067, -0.554505944, -0.000000008, -0.832179725, 0.000000001, 1.000000000, -0.000000010, 0.832179725, -0.000000006, -0.554505944),
+    ["Daisy"] = CFrame.new(581.550049, 165.490738, 213.499969, -0.964885235, -0.000000026, -0.262671858, -0.000000020, 1.000000000, -0.000000025, 0.262671858, -0.000000019, -0.964885235),
+    ["Arnold"] = CFrame.new(320.106323, 133.760483, 264.322601, -0.000000000, -0.000000062, 1.000000000, -0.000000046, 1.000000000, 0.000000062, -1.000000000, -0.000000046, -0.000000000),
+    ["Moosewood Shipwright"] = CFrame.new(357.972595, 133.615952, 258.154541, -0.000000000, 0.000000011, -1.000000000, 0.000000056, 1.000000000, 0.000000011, 1.000000000, -0.000000056, -0.000000000),
+    ["Phineas"] = CFrame.new(469.912292, 150.693405, 277.954987, 0.886104584, 0.000000002, -0.463485360, 0.000000003, 1.000000000, 0.000000009, 0.463485360, -0.000000009, 0.886104584),
+    ["Mosewood Angler"] = CFrame.new(480.102478, 150.525528, 302.226898, 1.000000000, -0.000000009, 0.000000000, 0.000000009, 1.000000000, -0.000000042, -0.000000000, 0.000000042, 1.000000000),
+    ["Challenges"] = CFrame.new(665.829590, 168.000015, 300.134216, 0.561880946, 0.000000016, 0.827218115, -0.000000075, 1.000000000, 0.000000031, -0.827218115, -0.000000079, 0.561880946),
+    ["Lantern Keeper"] = CFrame.new(658.445984, 163.500351, 260.213989, -0.000000000, 0.000000008, -1.000000000, 0.000000037, 1.000000000, 0.000000008, 1.000000000, -0.000000037, -0.000000000),
+    ["Trade Plaza Traveler"] = CFrame.new(378.872162, 133.615952, 368.356750, 1.000000000, -0.000000074, 0.000000000, 0.000000074, 1.000000000, -0.000000069, -0.000000000, 0.000000069, 1.000000000),
+    ["Captain Ahab"] = CFrame.new(440.964661, 135.198868, 358.233459, 0.252494812, 0.000000094, 0.967598259, 0.000000005, 1.000000000, -0.000000098, -0.967598259, 0.000000030, 0.252494812),
+    ["Synph"] = CFrame.new(566.263245, 152.000015, 353.872101, -0.753558099, -0.000000045, -0.657381296, -0.000000011, 1.000000000, -0.000000057, 0.657381296, -0.000000036, -0.753558099),
+    ["Mods Lantern Keeper"] = CFrame.new(-39.045677, -246.599991, 195.644363, -1.000000000, -0.000000032, 0.000000000, -0.000000032, 1.000000000, -0.000000017, -0.000000000, -0.000000017, -1.000000000),
+    ["Sea Traveler"] = CFrame.new(148.570923, 147.000031, 2031.93213, -0.342042685, 0, -0.939684391, 0, 1, 0, 0.939684391, 0, -0.342042685)
+}
+
+local chosenNPC = nil
+
+local npcNames = {}
+for name, _ in pairs(npcLocations) do
+    table.insert(npcNames, name)
+end
+
+Tabs.Teleport:Dropdown({
+    Title = "Select NPC",
+    Values = npcNames,
+    SearchBarEnabled = true,
+    Value = npcNames[1],
+    Callback = function(option)
+        chosenNPC = option
+    end
+})
+
+Tabs.Teleport:Button({
+    Title = "Teleport",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        if chosenNPC and npcLocations[chosenNPC] then
+            character.HumanoidRootPart.CFrame = npcLocations[chosenNPC]
+            WindUI:Notify({
+                Title = "Teleport",
+                Content = "Teleported to " .. chosenNPC,
+                Duration = 5,
+                Icon = "map-pin",
+            })
+        else
+            WindUI:Notify({
+                Title = "Teleport",
+                Content = "Please select a valid NPC!",
+                Duration = 5,
+                Icon = "map",
+            })
+        end
+    end
+})
+
+Tabs.Teleport:Section({ Title = "Cultists" })
+
+local cultistLocations = {
+    ["Maelira"] = CFrame.new(4340.352051, -2009.000244, -4656.336426, 0.713216186, -0.000000016, 0.700944126, -0.000000014, 1.000000000, 0.000000037, -0.700944126, -0.000000037, 0.713216186),
+    ["Eldran"] = CFrame.new(4294.739746, -2009.000122, -4623.690430, 0.051870540, -0.000000028, 0.998653829, -0.000000118, 1.000000000, 0.000000035, -0.998653829, -0.000000120, 0.051870540),
+    ["The Restless One"] = CFrame.new(4260.089355, -2003.000244, -4698.607910, 0.972168684, 0.000000056, 0.234281898, 0.000000035, 1.000000000, -0.000000386, -0.234281898, 0.000000383, 0.972168684),
+    ["Synthra"] = CFrame.new(4254.810547, -2483.073486, -4637.076172, -0.331468612, 0.000000055, -0.943466246, -0.000000001, 1.000000000, 0.000000059, 0.943466246, 0.000000020, -0.331468612),
+    ["Caleb"] = CFrame.new(4284.351562, -2233.817139, -4690.795410, 0.975383222, -0.000000002, -0.220516652, 0.000000004, 1.000000000, 0.000000009, 0.220516652, -0.000000010, 0.975383222),
+    ["Varn"] = CFrame.new(4224.804688, -2483.073486, -4696.249512, 0.996824205, 0.000000004, 0.079633504, 0.000000000, 1.000000000, -0.000000056, -0.079633504, 0.000000056, 0.996824205),
+    ["Kareth"] = CFrame.new(4389.568359, -2234.817139, -4661.641602, 0.642027020, 0.000000021, -0.766682029, 0.000000023, 1.000000000, 0.000000046, 0.766682029, -0.000000047, 0.642027020),
+    ["Tessael"] = CFrame.new(4246.805176, -2704.900391, -4676.648438, 0.542885184, 0.000000039, -0.839806914, -0.000000035, 1.000000000, 0.000000023, 0.839806914, 0.000000017, 0.542885184)
+}
+
+local chosenCultist = nil
+
+local cultistNames = {}
+for name, _ in pairs(cultistLocations) do
+    table.insert(cultistNames, name)
+end
+
+Tabs.Teleport:Dropdown({
+    Title = "Select Cultist",
+    Values = cultistNames,
+    SearchBarEnabled = true,
+    Value = cultistNames[1],
+    Callback = function(option)
+        chosenCultist = option
+    end
+})
+
+Tabs.Teleport:Button({
+    Title = "Teleport to Cultist",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        if chosenCultist and cultistLocations[chosenCultist] then
+            character.HumanoidRootPart.CFrame = cultistLocations[chosenCultist]
+            WindUI:Notify({
+                Title = "Teleport",
+                Content = "Teleported to " .. chosenCultist,
+                Duration = 5,
+                Icon = "map-pin",
+            })
+        else
+            WindUI:Notify({
+                Title = "Teleport",
+                Content = "Please select a valid cultist!",
+                Duration = 5,
+                Icon = "map",
+            })
+        end
+    end
+})
+
+Tabs.Teleport:Section({ Title = "Obelisks" })
+
+local obeliskLocations = {
+    ["Obelisk 1"] = CFrame.new(4367.428711, -2009.000122, -4620.733887, 0.344064683, 0.000000090, -0.938945949, 0.000000011, 1.000000000, 0.000000100, 0.938945949, -0.000000045, 0.344064683),
+    ["Obelisk 2"] = CFrame.new(4238.201172, -1977.000122, -4723.829590, 0.638251007, 0.000000007, 0.769828320, -0.000000008, 1.000000000, -0.000000002, -0.769828320, -0.000000005, 0.638251007),
+    ["Obelisk 3"] = CFrame.new(4220.081055, -2234.017090, -4689.773438, 0.766878545, 0.000000012, 0.641792238, -0.000000076, 1.000000000, 0.000000073, -0.641792238, -0.000000105, 0.766878545),
+    ["Obelisk 4"] = CFrame.new(4310.689453, -2233.817139, -4669.269531, -0.876362026, 0.000000004, 0.481653035, -0.000000016, 1.000000000, -0.000000038, -0.481653035, -0.000000041, -0.876362026),
+    ["Obelisk 5"] = CFrame.new(4393.388184, -2205.440674, -4707.740723, 0.997366369, -0.000000018, 0.072528049, 0.000000016, 1.000000000, 0.000000032, -0.072528049, -0.000000031, 0.997366369),
+    ["Obelisk 6"] = CFrame.new(4404.488281, -2234.781982, -4701.920410, 0.996561885, 0.000000001, -0.082851388, -0.000000001, 1.000000000, 0.000000001, 0.082851388, -0.000000001, 0.996561885),
+    ["Obelisk 7"] = CFrame.new(4182.998047, -2704.500244, -4662.078125, -0.528510630, -0.000000062, 0.848926663, -0.000000009, 1.000000000, 0.000000067, -0.848926663, 0.000000028, -0.528510630),
+    ["Obelisk 8"] = CFrame.new(4408.517578, -2710.136719, -4752.764648, 0.602161050, -0.000000057, 0.798374653, -0.000000017, 1.000000000, 0.000000084, -0.798374653, -0.000000064, 0.602161050),
+    ["Obelisk 9"] = CFrame.new(4267.068359, -2483.073486, -4720.633301, 0.937974632, -0.000000005, 0.346703887, -0.000000005, 1.000000000, 0.000000027, -0.346703887, -0.000000027, 0.937974632),
+    ["Obelisk 10"] = CFrame.new(4366.857910, -2482.015625, -4669.226562, -0.969801247, 0.000000004, 0.243896604, 0.000000002, 1.000000000, -0.000000008, -0.243896604, -0.000000007, -0.969801247),
+    ["Obelisk 11"] = CFrame.new(4392.885742, -2234.817139, -4653.999023, -0.879442811, 0.000000001, -0.476004601, 0.000000030, 1.000000000, -0.000000053, 0.476004601, -0.000000061, -0.879442811),
+    ["Obelisk 12"] = CFrame.new(4360.727051, -2710.136719, -4733.541504, -0.873290062, -0.000000014, 0.487200618, -0.000000035, 1.000000000, -0.000000035, -0.487200618, -0.000000047, -0.873290062),
+    ["Obelisk 13"] = CFrame.new(4447.700684, -2687.849854, -4670.589355, 0.755756199, -0.000000019, 0.654853106, 0.000000035, 1.000000000, -0.000000012, -0.654853106, 0.000000032, 0.755756199),
+    ["Obelisk 14"] = CFrame.new(4370.271484, -2710.136963, -4601.348145, -0.325288892, -0.000000102, 0.945614696, 0.000000000, 1.000000000, 0.000000108, -0.945614696, 0.000000035, -0.325288892),
+    ["Obelisk 15"] = CFrame.new(4457.051270, -2705.079102, -4611.040527, 0.541774690, 0.000000116, 0.840523779, -0.000000058, 1.000000000, -0.000000101, -0.840523779, 0.000000006, 0.541774690)
+}
+
+local chosenObelisk = nil
+
+local obeliskNames = {}
+for name, _ in pairs(obeliskLocations) do
+    table.insert(obeliskNames, name)
+end
+
+Tabs.Teleport:Dropdown({
+    Title = "Select Obelisk",
+    Values = obeliskNames,
+    SearchBarEnabled = true,
+    Value = obeliskNames[1],
+    Callback = function(option)
+        chosenObelisk = option
+    end
+})
+
+Tabs.Teleport:Button({
+    Title = "Teleport to Obelisk",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        if chosenObelisk and obeliskLocations[chosenObelisk] then
+            character.HumanoidRootPart.CFrame = obeliskLocations[chosenObelisk]
+            WindUI:Notify({
+                Title = "Teleport",
+                Content = "Teleported to " .. chosenObelisk,
+                Duration = 5,
+                Icon = "map-pin",
+            })
+        else
+            WindUI:Notify({
+                Title = "Teleport",
+                Content = "Please select a valid obelisk!",
+                Duration = 5,
+                Icon = "map",
+            })
+        end
+    end
+})
+
+Tabs.Teleport:Section({ Title = "Items" })
+
+local itemLocations = {
+    ["Crab Cage"] = CFrame.new(473.046112, 151.425507, 230.875168, -0.499223709, -0.000000010, 0.866473138, -0.000000015, 1.000000000, 0.000000003, -0.866473138, -0.000000012, -0.499223709),
+    ["GPS"] = CFrame.new(517.899170, 149.941254, 285.516754, -0.081131049, -0.722010314, -0.687109053, -0.994543254, 0.013280484, 0.103476569, -0.065586008, 0.691754818, -0.719147921),
+}
+
+local chosenItem = nil
+
+local itemNames = {}
+for name, _ in pairs(itemLocations) do
+    table.insert(itemNames, name)
+end
+
+Tabs.Teleport:Dropdown({
+    Title = "Select Item",
+    Values = itemNames,
+    SearchBarEnabled = true,
+    Value = itemNames[1],
+    Callback = function(option)
+        chosenItem = option
+    end
+})
+
+Tabs.Teleport:Button({
+    Title = "Teleport",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        if chosenItem and itemLocations[chosenItem] then
+            character.HumanoidRootPart.CFrame = itemLocations[chosenItem]
+            WindUI:Notify({
+                Title = "Teleport",
+                Content = "Teleported to " .. chosenItem,
+                Duration = 5,
+                Icon = "map-pin",
+            })
+        else
+            WindUI:Notify({
+                Title = "Teleport",
+                Content = "Please select a valid Item!",
+                Duration = 5,
+                Icon = "map",
+            })
+        end
+    end
+})
+
+Tabs.Teleport:Section({ Title = "Totems" })
+
+local totemLocations = {
+    ["Meteor Totem"] = CFrame.new(-1946.22998, 272.911011, 232.078003, 0.758035481, 0.199635401, 0.620909035, -0.0421228558, 0.965000629, -0.258842587, -0.650851786, 0.170057416, 0.73991394),
+    ["Tempest Totem"] = CFrame.new(36.4309998, 133.031006, 1946.11096, 0.602275848, 0, 0.798288047, 0, 1, 0, -0.798288047, 0, 0.602275848),
+    ["Windset Totem"] = CFrame.new(2851.60205, 175.845306, 2702.68115, -0.369645119, 3.03834677e-05, 0.929172993, 0.141992167, 0.988256574, 0.0564552285, -0.918259621, 0.152803689, -0.365308523),
+    ["Blue Moon Totem"] = CFrame.new(2717.40674, 139.18924, 2480.11499, 0.747215033, 0, 0.664582372, 0, 1, 0, -0.664582372, 0, 0.747215033),
+    ["Sundial Totem"] = CFrame.new(-1149.45605, 134.531998, -1077.27502, -0.945118904, 0, -0.326726705, 0, 1, 0, 0.326726705, 0, -0.945118904),
+    ["Smokescreen Totem"] = CFrame.new(2791.71191, 137.350998, -629.452026, -0.998513579, 0.0327778272, 0.0435543507, 0.0298345778, 0.997334361, -0.0665888488, -0.0456208885, -0.0651904196, -0.996829748),
+    ["Eclipse Totem"] = CFrame.new(5967.2832, 272.290009, 836.903015, -0.67464602, 0.204930946, 0.709123492, 0.0901876241, 0.976375043, -0.19636178, -0.73261106, -0.0685205162, -0.677189827),
+    ["Avalanche Totem"] = CFrame.new(19708.2539, 464.812012, 6058.12695, -0.47142148, 0, -0.881908059, 0, 1, 0, 0.881908059, 0, -0.47142148),
+    ["Blizzard Totem"] = CFrame.new(20148.748, 740.133972, 5803.66113, -0.555555582, 0, 0.83147943, 0, 1, 0, -0.83147943, 0, -0.555555582),
+    ["Poseidon Wrath Totem"] = CFrame.new(-3953.21289, -556.47699, 852.85199, 0.749975801, 0.370909452, 0.547688246, -0.433041573, 0.901207209, -0.0173374936, -0.500011206, -0.224169105, 0.83650279),
+    ["Zeus Storm Totem"] = CFrame.new(-4326.10889, -629.97699, 2686.59204, -0.682983756, -0.183021426, -0.707132995, -0.258811951, 0.96592772, -3.00034881e-05, 0.683044851, 0.182993948, -0.707081079),
+    ["Aurora Totem"] = CFrame.new(-1813.20496, -139.332001, -3280.39893, 0.671925902, -0.222812086, -0.70630753, 0.0369239748, 0.962564886, -0.268524557, 0.739697337, 0.154348925, 0.654999435)
+}
+
+local chosenTotem = nil
+
+local totemNames = {}
+for name, _ in pairs(totemLocations) do
+    table.insert(totemNames, name)
+end
+
+Tabs.Teleport:Dropdown({
+    Title = "Select Totem",
+    Values = totemNames,
+    SearchBarEnabled = true,
+    Value = totemNames[1],
+    Callback = function(option)
+        chosenTotem = option
+    end
+})
+
+Tabs.Teleport:Button({
+    Title = "Teleport",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        if chosenTotem and totemLocations[chosenTotem] then
+            character.HumanoidRootPart.CFrame = totemLocations[chosenTotem]
+            WindUI:Notify({
+                Title = "Teleport",
+                Content = "Teleported to " .. chosenTotem,
+                Duration = 5,
+                Icon = "map-pin",
+            })
+        else
+            WindUI:Notify({
+                Title = "Teleport",
+                Content = "Please select a valid totem!",
+                Duration = 5,
+                Icon = "map",
+            })
+        end
+    end
+})
+
+Tabs.Teleport:Section({ Title = "Rods" })
+
+local rodLocations = {
+    ["Zeus Rod"] = CFrame.new(-4270.84521, -626.403259, 2664.3479, 0.499959469, 0, 0.866048813, 0, 1, 0, -0.866048813, 0, 0.499959469),
+    ["Arctic Rod"] = CFrame.new(19578.2363, 132.338379, 5307.38281, 0.462664127, 0.826065004, -0.321804911, -0.571607292, 0.000499367714, -0.820527136, -0.677648067, 0.563574493, 0.472415924),
+    ["Avalanche Rod"] = CFrame.new(19770.1816, 415.680969, 5419.19678, 0.65369606, -0.341275394, -0.675435066, 0.0860147476, 0.920261979, -0.381732106, 0.751852989, 0.19143939, 0.630926371),
+    ["Summit Rod"] = CFrame.new(20207.7539, 736.058289, 5711.35156, -0.321401596, -0.946943283, -0.0000230371952, -0.0000230371952, 0.0000319480896, -1.00000024, 0.946943283, -0.321401477, -0.0000324249268),
+    ["Phoenix Rod"] = CFrame.new(5971.03125, 270.377502, 852.372559, -0.498096943, 0.101641625, -0.861143589, -0.0435730033, 0.988917768, 0.141926154, 0.866025805, 0.108215615, -0.488148093),
+    ["Volcanic Rod"] = CFrame.new(-3178.24463, -2035.75085, 4021.57886, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    ["Kings Rod"] = CFrame.new(1375.57642, -810.201721, -303.509247, -0.7490201, 0.662445903, -0.0116144121, -0.0837960541, -0.0773290396, 0.993478119, 0.657227278, 0.745108068, 0.113431036),
+    ["Lost Rod"] = CFrame.new(2879.87695, 135.791916, 2727.48145, 0.970463336, -0.168695927, -0.172460333, 0.141582936, -0.180552125, 0.973321974, -0.195333466, -0.968990743, -0.151334763),
+    ["Carbon Rod"] = CFrame.new(454.083618, 150.590073, 225.328827, 0.985374212, -0.170404434, 0.000000141561031, 0.000000141561031, 0.0000017285347, 1, -0.170404434, -0.985374212, 0.0000017285347),
+    ["Fast Rod"] = CFrame.new(447.183563, 148.225739, 220.187454, 0.981104493, 0.0000126492232, 0.193478703, -0.0522461236, 0.962867677, 0.264870107, -0.186291039, -0.269973755, 0.944674432),
+    ["Flimsy Rod"] = CFrame.new(471.107697, 148.36171, 229.642441, 0.841614008, 0.0774728209, -0.534493923, 0.00678436086, 0.988063335, 0.153898612, 0.540036798, -0.13314943, 0.831042409),
+    ["Long Rod"] = CFrame.new(485.695038, 171.656326, 145.746109, -0.630167365, -0.776459217, -0.00000533461571, 0.00000533461571, -0.0000112056732, 1, -0.776459217, 0.630167365, 0.0000112056732),
+    ["Lucky Rod"] = CFrame.new(446.085999, 148.253006, 222.160004, 0.974526405, -0.22305499, 0.0233404674, 0.196993902, 0.901088715, 0.386306256, -0.107199371, -0.371867687, 0.922075212),
+    ["Plastic Rod"] = CFrame.new(454.425385, 148.169739, 229.172424, 0.951755166, 0.0709736273, -0.298537821, -0.000000342726707, 0.972884834, 0.231290117, 0.306858391, -0.220131472, 0.925948203),
+    ["Training Rod"] = CFrame.new(457.693848, 148.357529, 230.414307, 1, 0, 0, 0, 0.975410998, 0.220393807, 0, -0.220393807, 0.975410998),
+    ["Magnet Rod"] = CFrame.new(-242.587631, 139.601608, 1958.36707, 0.448886991, -0.160295755, 0.879093707, 0.0578461997, 0.986928284, 0.150420845, -0.891714275, -0.0166697428, 0.452291787),
+    ["Poseidon Rod"] = CFrame.new(-4086.14795, -557.409241, 895.166809, 0, 0, -1, 0, 1, 0, 1, 0, 0),
+    ["Abyssal Specter Rod"] = CFrame.new(-3804.09668, -566.402893, 1870.32849, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    ["Champions Rod"] = CFrame.new(-4277.4541, -602.719604, 1839.05908, -0.997859359, 0, 0.0653970614, 0, 1, 0, -0.0653970614, 0, -0.997859359),
+    ["Depthseeker Rod"] = CFrame.new(-4466.24609, -596.11145, 1875.07166, 0.93894881, 0, -0.344056875, 0, 1, 0, 0.344056875, 0, 0.93894881),
+    ["Kraken Rod"] = CFrame.new(-4415.41699, -995.66217, 2054.45312, 0, 0, -1, 0, 1, 0, 1, 0, 0),
+    ["Tempest Rod"] = CFrame.new(-4927.61865, -594.829651, 1856.89734, 0.751858234, 0, -0.659324884, 0, 1, 0, 0.659324884, 0, 0.751858234),
+    ["Reinforced Rod"] = CFrame.new(-986.474365, -245.473938, -2689.79248, 0.950221658, -0.248433635, 0.188041329, -0.188312545, 0.0228964686, 0.981842279, -0.248228103, -0.968378305, -0.0250264406),
+    ["Trident Rod"] = CFrame.new(-1484.34192, -222.325562, -2194.77002, -0.466092706, -0.536795318, 0.703284025, -0.319611132, 0.843386114, 0.43191275, -0.824988723, -0.0234660208, -0.56466186),
+    ["Nocturnal Rod"] = CFrame.new(-141.874237, -515.313538, 1139.04529, 0.161644459, -0.98684907, 0.0000187754631, 0.0000187754631, 0.0000221133232, 1, -0.98684907, -0.161644459, 0.0000221133232),
+    ["Fortune Rod"] = CFrame.new(-1513.81958, 141.283279, 752.977478, -0.0380496979, 0.999275863, 0.0000113248825, -0.0000113248825, -0.0000118017197, 1, 0.999275863, 0.0380496681, 0.0000118017197),
+    ["Rapid Rod"] = CFrame.new(-1499.87732, 139.27652, 756.464355, -0.246068597, -0.250960022, 0.936199546, 0.0317824259, 0.963289857, 0.266575575, -0.968731284, 0.0953505188, -0.229059219),
+    ["Steady Rod"] = CFrame.new(-1499.36743, 139.230103, 758.399902, -0.246068597, -0.250960022, 0.936199546, 0.0317824259, 0.963289857, 0.266575575, -0.968731284, 0.0953505188, -0.229059219),
+    ["Ethereal Prism Rod"] = CFrame.new(-4359.83936, -11172.4326, 3718.91968, -0.17294538, -0.0150992535, -0.984815717, -0.0871652216, 0.996193886, 0.0000335425138, 0.981066823, 0.0858474746, -0.173603177),
+    ["Rod Of The Depths"] = CFrame.new(1704.84009, -903.546753, 1447.78687, 0.954411745, 0, -0.298493177, 0, 1, 0, 0.298493177, 0, 0.954411745),
+    ["Carrot Rod"] = CFrame.new(3723.05957, -1120.51099, -1058.6311, -1.00000024, 0, 0, 0, 0.973875403, 0.227082938, 0, 0.227082938, -0.973875761),
+    ["Aurora Rod"] = CFrame.new(-144.462006, -514.395081, 1130.17383, 0.951246321, -0.286451101, -0.114351019, 0.258846343, 0.943026602, -0.20904395, 0.167716935, 0.169252962, 0.971197426),
+    ["Rod Of The Zenith"] = CFrame.new(-13625.1162, -11034.4316, 357.60199, 0.766061246, 0, -0.642767608, 0, 1, 0, 0.642767608, 0, 0.766061246),
+    ["Scurvy Rod"] = CFrame.new(-2828.21851, 213.457199, 1512.20959, -0.939700961, -0.341998369, 0, -0.341998369, 0.939700544, 0, 0, 0, -1.00000048),
+    ["Eidolon Rod (Please activate all obelisks first!)"] = CFrame.new(4482.535156, -2714.468750, -4634.216797, -0.602288902, 0.000000059, -0.798278213, 0.000000023, 1.000000000, 0.000000057, 0.798278213, 0.000000016, -0.602288902)
+}
+
+local chosenRod = nil
+
+local rodNames = {}
+for name, _ in pairs(rodLocations) do
+    table.insert(rodNames, name)
+end
+
+Tabs.Teleport:Dropdown({
+    Title = "Select Rod",
+    Values = rodNames,
+    SearchBarEnabled = true,
+    Value = rodNames[1],
+    Callback = function(option)
+        chosenRod = option
+    end
+})
+
+Tabs.Teleport:Button({
+    Title = "Teleport",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        if chosenRod and rodLocations[chosenRod] then
+            character.HumanoidRootPart.CFrame = rodLocations[chosenRod]
+            WindUI:Notify({
+                Title = "Teleport",
+                Content = "Teleported to " .. chosenRod,
+                Duration = 5,
+                Icon = "map-pin",
+            })
+        else
+            WindUI:Notify({
+                Title = "Teleport",
+                Content = "Please select a valid rod!",
+                Duration = 5,
+                Icon = "map",
+            })
+        end
+    end
+})
+
+-- Water Walking Platform
+local WaterWalkingEnabled = false
+local WaterPlatformPart = nil
+local PlatformFollow = false
+
+Tabs.Misc:Toggle({
+    Title = "Walk on Water/Air",
+    Desc = "Creates invisible platform to walk on water or through air",
+    Value = false,
+    Callback = function(state)
+        WaterWalkingEnabled = state
+        
+        if WaterWalkingEnabled then
+            -- Create platform only when toggle is enabled
+            local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+            local HumanoidRoot = Character:WaitForChild("HumanoidRootPart")
+            
+            WaterPlatformPart = Instance.new("Part")
+            WaterPlatformPart.Name = "WaterWalkPlatform"
+            WaterPlatformPart.Size = Vector3.new(10, 1, 10)
+            WaterPlatformPart.Anchored = true
+            WaterPlatformPart.CanCollide = true
+            WaterPlatformPart.Material = Enum.Material.Neon
+            WaterPlatformPart.Color = Color3.fromRGB(0, 162, 255)
+            WaterPlatformPart.Transparency = 1
+            WaterPlatformPart.Parent = workspace
+
+            WaterPlatformPart.Position = Vector3.new(
+                HumanoidRoot.Position.X,
+                HumanoidRoot.Position.Y - 3,
+                HumanoidRoot.Position.Z
+            )
+
+            PlatformFollow = true
+            
+            -- Platform follow loop
+            local followLoop = RunService.RenderStepped:Connect(function()
+                if PlatformFollow and HumanoidRoot and WaterPlatformPart then
+                    local currentPos = WaterPlatformPart.Position
+                    WaterPlatformPart.Position = Vector3.new(
+                        HumanoidRoot.Position.X,
+                        currentPos.Y,
+                        HumanoidRoot.Position.Z
+                    )
+                end
+            end)
+            
+            -- Store connection to disconnect later
+            getgenv().WaterWalkConnection = followLoop
+            
+        else
+            PlatformFollow = false
+            if getgenv().WaterWalkConnection then
+                getgenv().WaterWalkConnection:Disconnect()
+                getgenv().WaterWalkConnection = nil
+            end
+            if WaterPlatformPart then
+                WaterPlatformPart:Destroy()
+                WaterPlatformPart = nil
+            end
+        end
+    end
+})
+
+-- Infinite Oxygen
+local InfiniteO2Enabled = false
+
+Tabs.Misc:Toggle({
+    Title = "Infinite Oxygen",
+    Desc = "Never run out of oxygen while underwater",
+    Value = false,
+    Callback = function(state)
+        InfiniteO2Enabled = state
+        
+        if InfiniteO2Enabled then
+            local character = game.Players.LocalPlayer.Character
+            if character and character:FindFirstChild("Resources") then
+                local oxygen = character.Resources:FindFirstChild("oxygen")
+                if oxygen then
+                    oxygen.Enabled = false
+                end
+            end
+            WindUI:Notify({
+                Title = "VEX",
+                Content = "Infinite Oxygen Enabled!",
+                Duration = 3,
+                Icon = "wind"
+            })
+        else
+            local character = game.Players.LocalPlayer.Character
+            if character and character:FindFirstChild("Resources") then
+                local oxygen = character.Resources:FindFirstChild("oxygen")
+                if oxygen then
+                    oxygen.Enabled = true
+                end
+            end
+            WindUI:Notify({
+                Title = "VEX",
+                Content = "Infinite Oxygen Disabled!",
+                Duration = 3,
+                Icon = "wind"
+            })
+        end
+    end
+})
+
+-- Handle character respawns for oxygen
+game.Players.LocalPlayer.CharacterAdded:Connect(function(character)
+    task.wait(1)
+    if InfiniteO2Enabled then
+        if character:FindFirstChild("Resources") then
+            local oxygen = character.Resources:FindFirstChild("oxygen")
+            if oxygen then
+                oxygen.Enabled = false
+            end
+        end
+    end
+end)
+
+-- No Clip Toggle
+local NoClipEnabled = false
+local NoClipConnection = nil
+
+Tabs.Misc:Toggle({
+    Title = "No Clip",
+    Desc = "Walk through walls and objects",
+    Value = false,
+    Callback = function(state)
+        NoClipEnabled = state
+        
+        if NoClipEnabled then
+            -- Enable No Clip
+            local character = game.Players.LocalPlayer.Character
+            if character then
+                -- Set all parts to CanCollide false
+                for _, part in pairs(character:GetDescendants()) do
+                    if part:IsA("BasePart") then
+                        part.CanCollide = false
+                    end
+                end
+            end
+            
+            -- Start continuous No Clip loop
+            NoClipConnection = RunService.Stepped:Connect(function()
+                if NoClipEnabled then
+                    local character = game.Players.LocalPlayer.Character
+                    if character then
+                        for _, part in pairs(character:GetDescendants()) do
+                            if part:IsA("BasePart") then
+                                part.CanCollide = false
+                            end
+                        end
+                    end
+                else
+                    -- Disconnect if disabled
+                    if NoClipConnection then
+                        NoClipConnection:Disconnect()
+                        NoClipConnection = nil
+                    end
+                end
+            end)
+            
+            WindUI:Notify({
+                Title = "No Clip",
+                Content = "No Clip Enabled!",
+                Duration = 3,
+                Icon = "user-x"
+            })
+        else
+            -- Disable No Clip
+            if NoClipConnection then
+                NoClipConnection:Disconnect()
+                NoClipConnection = nil
+            end
+            
+            -- Restore collision
+            local character = game.Players.LocalPlayer.Character
+            if character then
+                for _, part in pairs(character:GetDescendants()) do
+                    if part:IsA("BasePart") then
+                        part.CanCollide = true
+                    end
+                end
+            end
+            
+            WindUI:Notify({
+                Title = "No Clip",
+                Content = "No Clip Disabled!",
+                Duration = 3,
+                Icon = "user-check"
+            })
+        end
+    end
+})
+
+-- Handle character respawns for No Clip
+game.Players.LocalPlayer.CharacterAdded:Connect(function(character)
+    task.wait(1) -- Wait for character to fully load
+    if NoClipEnabled then
+        -- Apply No Clip to new character
+        for _, part in pairs(character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CanCollide = false
+            end
+        end
+    end
+end)
+
+local AntiAFKEnabled = false
+
+Tabs.Misc:Toggle({
+    Title = "Anti AFK",
+    Desc = "Prevents you from being kicked for being idle",
+    Value = false,
+    Callback = function(state)
+        AntiAFKEnabled = state
+        
+        if AntiAFKEnabled then
+            WindUI:Notify({
+                Title = "Anti AFK",
+                Content = "Anti AFK Enabled! You won't get kicked for being idle.",
+                Duration = 3,
+                Icon = "user-check"
+            })
+        else
+            WindUI:Notify({
+                Title = "Anti AFK",
+                Content = "Anti AFK Disabled!",
+                Duration = 3,
+                Icon = "user-x"
+            })
+        end
+    end
+})
+
+-- Anti AFK Loop
+local lastAFKTime = tick()
+
+task.spawn(function()
+    while true do
+        task.wait(30) -- Check every 30 seconds
+        if AntiAFKEnabled then
+            local currentTime = tick()
+            
+            -- Simulate a small mouse movement every 10 minutes to prevent AFK
+            if currentTime - lastAFKTime >= 600 then -- 10 minutes
+                pcall(function()
+                    local screenSize = workspace.CurrentCamera.ViewportSize
+                    VirtualInputManager:SendMouseMoveEvent(
+                        math.random(50, screenSize.X - 50),
+                        math.random(50, screenSize.Y - 50),
+                        game
+                    )
+                    lastAFKTime = currentTime
+                end)
+            end
+            
+            -- Alternative method: Press a key
+            pcall(function()
+                VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.Space, false, game)
+                task.wait(0.1)
+                VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.Space, false, game)
+            end)
+        end
+    end
+end)
+
+-- Select first tab
+Window:SelectTab(1)
+
+-- Floating button
+local TweenService = game:GetService("TweenService")
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.CoreGui
+
+local ImageButton = Instance.new("ImageButton")
+ImageButton.Parent = ScreenGui
+ImageButton.Size = UDim2.new(0, 65, 0, 65)
+ImageButton.Position = UDim2.new(0, 100, 1, -300)
+ImageButton.BackgroundTransparency = 1
+ImageButton.Image = "rbxassetid://82233980503615"
+
+local UICorner = Instance.new("UICorner")
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = ImageButton
+
+local WindowOpen = false
+ImageButton.MouseButton1Click:Connect(function()
+    local shrink = TweenService:Create(ImageButton, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+        Size = UDim2.new(0, 50, 0, 50)
+    })
+    local grow = TweenService:Create(ImageButton, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+        Size = UDim2.new(0, 60, 0, 60)
+    })
+
+    shrink:Play()
+    shrink.Completed:Wait()
+    grow:Play()
+
+    if WindowOpen then
+        Window:Close()
+    else
+        Window:Open()
+    end
+    WindowOpen = not WindowOpen
+end)
+
+local UserInputService = game:GetService("UserInputService")
+local isDragging = false
+local dragInput, dragStart, startPosition
+
+local function updatePosition(input)
+    local delta = input.Position - dragStart
+    ImageButton.Position = UDim2.new(
+        startPosition.X.Scale, startPosition.X.Offset + delta.X,
+        startPosition.Y.Scale, startPosition.Y.Offset + delta.Y
+    )
+end
+
+ImageButton.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 
+    or input.UserInputType == Enum.UserInputType.Touch then
+        isDragging = true
+        dragStart = input.Position
+        startPosition = ImageButton.Position
+
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                isDragging = false
+            end
+        end)
+    end
+end)
+
+ImageButton.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement 
+    or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if input == dragInput and isDragging then
+        updatePosition(input)
+    end
+end)
