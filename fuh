@@ -173,90 +173,23 @@ Tabs.Farm:Toggle({
                 while getgenv().AutoEquipRod and task.wait(1) do
                     local player = game.Players.LocalPlayer
                     local backpack = player:WaitForChild("Backpack")
+                    local character = player.Character
 
-                    local hasRod = false
-                    if player.Character then
-                        for _, tool in ipairs(player.Character:GetChildren()) do
-                            if tool:IsA("Tool") and (
-                                string.find(tool.Name:lower(), "rod") or 
-                                string.find(tool.Name:lower(), "rend") or
-                                string.find(tool.Name:lower(), "ravager") or
-                                string.find(tool.Name:lower(), "yarncaster") or
-                                string.find(tool.Name:lower(), "boom") or
-                                string.find(tool.Name:lower(), "oath") or
-                                string.find(tool.Name:lower(), "staff") or
-                                string.find(tool.Name:lower(), "duskwire") or
-                                string.find(tool.Name:lower(), "spiritbinder") or
-                                string.find(tool.Name:lower(), "pitchfork") or
-                                string.find(tool.Name:lower(), "mossripper") or
-                                string.find(tool.Name:lower(), "onirifalx") or
-                                string.find(tool.Name:lower(), "dreambreaker") or
-                                string.find(tool.Name:lower(), "blazer") or
-                                string.find(tool.Name:lower(), "fang") or
-                                string.find(tool.Name:lower(), "fallen") or
-                                string.find(tool.Name:lower(), "wingripper") or
-                                string.find(tool.Name:lower(), "serenade") or
-                                string.find(tool.Name:lower(), "cinderstring") or
-                                string.find(tool.Name:lower(), "eardrum") or
-                                string.find(tool.Name:lower(), "chrysalis") or
-                                string.find(tool.Name:lower(), "axe") or
-                                string.find(tool.Name:lower(), "blade") or
-                                string.find(tool.Name:lower(), "guitar") or
-                                string.find(tool.Name:lower(), "sword") or
-                                string.find(tool.Name:lower(), "spire") or
-                                string.find(tool.Name:lower(), "paintbrush") or
-                                string.find(tool.Name:lower(), "nilcaster") or
-                                string.find(tool.Name:lower(), "fish") or
-                                string.find(tool.Name:lower(), "smasher") or
-                                string.find(tool.Name:lower(), "caster") or
-                                string.find(tool.Name:lower(), "sovereign") or
-                                string.find(tool.Name:lower(), "elemental")
-                            ) then
+                    if character then
+                        local hasRod = false
+                        for _, tool in ipairs(character:GetChildren()) do
+                            if tool:IsA("Tool") and tool:FindFirstChild("ToolTip") and tool.ToolTip.Value == "fisch" then
                                 hasRod = true
                                 break
                             end
                         end
-                    end
 
-                    if not hasRod then
-                        for _, tool in ipairs(backpack:GetChildren()) do
-                            if tool:IsA("Tool") and (
-                                string.find(tool.Name:lower(), "rod") or 
-                                string.find(tool.Name:lower(), "rend") or
-                                string.find(tool.Name:lower(), "ravager") or
-                                string.find(tool.Name:lower(), "yarncaster") or
-                                string.find(tool.Name:lower(), "boom") or
-                                string.find(tool.Name:lower(), "oath") or
-                                string.find(tool.Name:lower(), "staff") or
-                                string.find(tool.Name:lower(), "duskwire") or
-                                string.find(tool.Name:lower(), "spiritbinder") or
-                                string.find(tool.Name:lower(), "pitchfork") or
-                                string.find(tool.Name:lower(), "mossripper") or
-                                string.find(tool.Name:lower(), "onirifalx") or
-                                string.find(tool.Name:lower(), "dreambreaker") or
-                                string.find(tool.Name:lower(), "blazer") or
-                                string.find(tool.Name:lower(), "fang") or
-                                string.find(tool.Name:lower(), "fallen") or
-                                string.find(tool.Name:lower(), "wingripper") or
-                                string.find(tool.Name:lower(), "serenade") or
-                                string.find(tool.Name:lower(), "cinderstring") or
-                                string.find(tool.Name:lower(), "eardrum") or
-                                string.find(tool.Name:lower(), "chrysalis") or
-                                string.find(tool.Name:lower(), "axe") or
-                                string.find(tool.Name:lower(), "blade") or
-                                string.find(tool.Name:lower(), "guitar") or
-                                string.find(tool.Name:lower(), "sword") or
-                                string.find(tool.Name:lower(), "spire") or
-                                string.find(tool.Name:lower(), "paintbrush") or
-                                string.find(tool.Name:lower(), "nilcaster") or
-                                string.find(tool.Name:lower(), "fish") or
-                                string.find(tool.Name:lower(), "smasher") or
-                                string.find(tool.Name:lower(), "caster") or
-                                string.find(tool.Name:lower(), "sovereign") or
-                                string.find(tool.Name:lower(), "elemental")
-                            ) then
-                                player.Character.Humanoid:EquipTool(tool)
-                                break
+                        if not hasRod then
+                            for _, tool in ipairs(backpack:GetChildren()) do
+                                if tool:IsA("Tool") and tool:FindFirstChild("ToolTip") and tool.ToolTip.Value == "fisch" then
+                                    character.Humanoid:EquipTool(tool)
+                                    break
+                                end
                             end
                         end
                     end
@@ -301,41 +234,7 @@ local function HasRodEquipped()
     if not character then return false end
     
     for _, tool in ipairs(character:GetChildren()) do
-        if tool:IsA("Tool") and (
-            string.find(tool.Name:lower(), "rod") or 
-            string.find(tool.Name:lower(), "rend") or
-            string.find(tool.Name:lower(), "ravager") or
-            string.find(tool.Name:lower(), "yarncaster") or
-            string.find(tool.Name:lower(), "boom") or
-            string.find(tool.Name:lower(), "oath") or
-            string.find(tool.Name:lower(), "staff") or
-            string.find(tool.Name:lower(), "duskwire") or
-            string.find(tool.Name:lower(), "spiritbinder") or
-            string.find(tool.Name:lower(), "pitchfork") or
-            string.find(tool.Name:lower(), "mossripper") or
-            string.find(tool.Name:lower(), "onirifalx") or
-            string.find(tool.Name:lower(), "dreambreaker") or
-            string.find(tool.Name:lower(), "blazer") or
-            string.find(tool.Name:lower(), "fang") or
-            string.find(tool.Name:lower(), "fallen") or
-            string.find(tool.Name:lower(), "wingripper") or
-            string.find(tool.Name:lower(), "serenade") or
-            string.find(tool.Name:lower(), "cinderstring") or
-            string.find(tool.Name:lower(), "eardrum") or
-            string.find(tool.Name:lower(), "chrysalis") or
-            string.find(tool.Name:lower(), "axe") or
-            string.find(tool.Name:lower(), "blade") or
-            string.find(tool.Name:lower(), "guitar") or
-            string.find(tool.Name:lower(), "sword") or
-            string.find(tool.Name:lower(), "spire") or
-            string.find(tool.Name:lower(), "paintbrush") or
-            string.find(tool.Name:lower(), "nilcaster") or
-            string.find(tool.Name:lower(), "fish") or
-            string.find(tool.Name:lower(), "smasher") or
-            string.find(tool.Name:lower(), "caster") or
-            string.find(tool.Name:lower(), "sovereign") or
-            string.find(tool.Name:lower(), "elemental")
-        ) then
+        if tool:IsA("Tool") and tool:FindFirstChild("ToolTip") and tool.ToolTip.Value == "fisch" then
             return true
         end
     end
