@@ -175,21 +175,11 @@ Tabs.Farm:Toggle({
                     local backpack = player:WaitForChild("Backpack")
                     local character = player.Character
 
-                    if character then
-                        local hasRod = false
-                        for _, tool in ipairs(character:GetChildren()) do
-                            if tool:IsA("Tool") and tool:FindFirstChild("ToolTip") and tool.ToolTip.Value == "fisch" then
-                                hasRod = true
+                    if character and character:FindFirstChild("Humanoid") then
+                        for _, tool in ipairs(backpack:GetChildren()) do
+                            if tool.ClassName == "Tool" and tool.ToolTip == "fisch" then
+                                character.Humanoid:EquipTool(tool)
                                 break
-                            end
-                        end
-
-                        if not hasRod then
-                            for _, tool in ipairs(backpack:GetChildren()) do
-                                if tool:IsA("Tool") and tool:FindFirstChild("ToolTip") and tool.ToolTip.Value == "fisch" then
-                                    character.Humanoid:EquipTool(tool)
-                                    break
-                                end
                             end
                         end
                     end
@@ -234,7 +224,7 @@ local function HasRodEquipped()
     if not character then return false end
     
     for _, tool in ipairs(character:GetChildren()) do
-        if tool:IsA("Tool") and tool:FindFirstChild("ToolTip") and tool.ToolTip.Value == "fisch" then
+        if tool.ClassName == "Tool" and tool.ToolTip == "fisch" then
             return true
         end
     end
