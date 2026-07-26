@@ -548,7 +548,7 @@ Tabs.Farm:Toggle({
     end
 })
 
-local ReelController
+local ReelController 
 
 local function PerformReel()
     if not ReelController then
@@ -567,7 +567,7 @@ local function PerformReel()
     if isPinionsAria then
         activeReel.barSize = 1
         activeReel.minBarSize = 0.1
-        activeReel.barPosition = 0.5
+        activeReel.barPosition = activeReel.fishPosition  -- Follow fish, not 0.5
         activeReel.onbar = true
     else
         activeReel.barSize = 1
