@@ -439,6 +439,10 @@ Tabs.Farm:Toggle({
 
 local ReelController 
 
+local ReelController
+local oldUpdateUI
+local hooked = false
+
 local function PerformReel()
     if not ReelController then
         ReelController = require(game:GetService("ReplicatedStorage")
@@ -449,18 +453,22 @@ local function PerformReel()
     
     local activeReel = ReelController.ActiveReel
     if not activeReel then return end
-    if not activeReel.active then return end
+    if not activeReel.active then 
+        hooked = false
+        return 
+    end
     
-    local isPinionsAria = activeReel.rodName == "Pinion's Aria" or activeReel.rodName == "Pinion's Aria (Restricted)"
-    
-    if isPinionsAria then
-        activeReel.barSize = 1
-        activeReel.minBarSize = 0.1
-        activeReel.barPosition = 0.5 -- Follow fish, not 0.5
-        activeReel.onbar = true
-    else
-        activeReel.barSize = 1
-        activeReel.barPosition = activeReel.fishPosition
+    -- Hook UpdateUI to force our values
+    if not hooked and activeReel.UpdateUI then
+        oldUpdateUI = activeReel.UpdateUI
+        activeReel.UpdateUI = function(self, dt)
+            self.barSize = 1
+            self.minBarSize = 0.1
+            self.barPosition = 0.5
+            self.onbar = true
+            oldUpdateUI(self, dt)
+        end
+        hooked = true
     end
 end
 
