@@ -456,7 +456,7 @@ local function PerformReel()
     if isPinionsAria then
         activeReel.barSize = 1
         activeReel.minBarSize = 0.1
-        activeReel.barPosition = activeReel.fishPosition  -- Follow fish, not 0.5
+        activeReel.barPosition = 0.5 -- Follow fish, not 0.5
         activeReel.onbar = true
     else
         activeReel.barSize = 1
